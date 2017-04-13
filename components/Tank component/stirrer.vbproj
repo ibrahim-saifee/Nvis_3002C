@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{19284E5E-20E3-45AD-8824-FA44709FF186}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SquareTank</RootNamespace>
+    <AssemblyName>SquareTank</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>SquareTank.xml</DocumentationFile>
+    <DefineConstants>_MYFORMS=True</DefineConstants>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SquareTank.xml</DocumentationFile>
+    <DefineConstants>_MYFORMS=True</DefineConstants>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="VolumeMeter">
+      <HintPath>..\..\..\VolumeMeter_Simple\bin\Debug\VolumeMeter.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="SquareTank.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SquareTank.Designer.vb">
+      <DependentUpon>SquareTank.vb</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SquareTank.resx">
+      <DependentUpon>SquareTank.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coilheateroff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coilheateron1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stirrer Images\Stirrer0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stirrer Images\stirrer1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stirrer Images\Stirrer2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stirrer Images\Stirrer3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stirrer Images\Stirrer4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stirrer Images\Stirrer5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stirrer Images\Stirrer6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stirrer Images\Stirrer7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stirrer Images\Stirrer8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stirrer Images\Stirrer9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stirrer Images\Stirrer10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stirrer Images\Stirrer11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stirrer Images\Stirrer12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stirrer Images\Stirrer15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stirrer Images\Stirrer16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stirrer Images\Stirrer13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Stirrer Images\Stirrer14.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
