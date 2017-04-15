@@ -24,16 +24,32 @@ Public Class Delete
 
     Dim DeleteThread As Thread
     Private Sub Delete()
-        Try
-            SQLConnection.Open()
-            SQLCommand = New MySqlCommand("delete from " + MainForm.DatabaseName + " where date(datetime) like '" + DateTime.Parse(datebox.Text).ToString("yyyy-MM-dd") + "';", SQLConnection)
-            SQLCommand.CommandTimeout = 0
-            SQLReader = SQLCommand.ExecuteReader()
-            SQLReader.Read()
-        Catch ex As Exception
-            MessageBox.Show(Me, ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
-        SQLConnection.Close()
+        CheckForIllegalCrossThreadCalls = False
+        If FlowDeleteCheckBox.Checked Then
+            Try
+                SQLConnection.Open()
+                SQLCommand = New MySqlCommand("delete from " + MainForm.FlowTableName + " where date(datetime) like '" + DateTime.Parse(datebox.Text).ToString("yyyy-MM-dd") + "';", SQLConnection)
+                SQLCommand.CommandTimeout = 0
+                SQLReader = SQLCommand.ExecuteReader()
+                SQLReader.Read()
+            Catch ex As Exception
+                MessageBox.Show(Me, ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End Try
+            SQLConnection.Close()
+        End If
+
+        If LevelDeleteCheckBox.Checked Then
+            Try
+                SQLConnection.Open()
+                SQLCommand = New MySqlCommand("delete from " + MainForm.LevelTableName + " where date(datetime) like '" + DateTime.Parse(datebox.Text).ToString("yyyy-MM-dd") + "';", SQLConnection)
+                SQLCommand.CommandTimeout = 0
+                SQLReader = SQLCommand.ExecuteReader()
+                SQLReader.Read()
+            Catch ex As Exception
+                MessageBox.Show(Me, ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End Try
+            SQLConnection.Close()
+        End If
         Me.Close()
     End Sub
 

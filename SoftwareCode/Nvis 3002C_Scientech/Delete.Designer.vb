@@ -31,6 +31,9 @@ Partial Class Delete
         Me.StatusLabel = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.FlowDeleteCheckBox = New System.Windows.Forms.CheckBox()
+        Me.LevelDeleteCheckBox = New System.Windows.Forms.CheckBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -38,7 +41,7 @@ Partial Class Delete
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(15, 14)
+        Me.Label1.Location = New System.Drawing.Point(12, 90)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(81, 15)
         Me.Label1.TabIndex = 2
@@ -47,7 +50,7 @@ Partial Class Delete
         'DeleteButton
         '
         Me.DeleteButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DeleteButton.Location = New System.Drawing.Point(194, 12)
+        Me.DeleteButton.Location = New System.Drawing.Point(191, 88)
         Me.DeleteButton.Name = "DeleteButton"
         Me.DeleteButton.Size = New System.Drawing.Size(83, 30)
         Me.DeleteButton.TabIndex = 4
@@ -66,7 +69,7 @@ Partial Class Delete
         '
         'datebox
         '
-        Me.datebox.Location = New System.Drawing.Point(102, 14)
+        Me.datebox.Location = New System.Drawing.Point(99, 90)
         Me.datebox.Mask = "00/00/0000"
         Me.datebox.Name = "datebox"
         Me.datebox.Size = New System.Drawing.Size(76, 20)
@@ -75,7 +78,7 @@ Partial Class Delete
         'CancelButton1
         '
         Me.CancelButton1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CancelButton1.Location = New System.Drawing.Point(194, 48)
+        Me.CancelButton1.Location = New System.Drawing.Point(191, 124)
         Me.CancelButton1.Name = "CancelButton1"
         Me.CancelButton1.Size = New System.Drawing.Size(83, 32)
         Me.CancelButton1.TabIndex = 6
@@ -85,16 +88,16 @@ Partial Class Delete
         'StatusLabel
         '
         Me.StatusLabel.AutoSize = True
-        Me.StatusLabel.Location = New System.Drawing.Point(13, 56)
+        Me.StatusLabel.Location = New System.Drawing.Point(6, 147)
         Me.StatusLabel.Name = "StatusLabel"
-        Me.StatusLabel.Size = New System.Drawing.Size(10, 13)
+        Me.StatusLabel.Size = New System.Drawing.Size(13, 13)
         Me.StatusLabel.TabIndex = 7
-        Me.StatusLabel.Text = " "
+        Me.StatusLabel.Text = "  "
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(102, 36)
+        Me.Label4.Location = New System.Drawing.Point(99, 112)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(71, 13)
         Me.Label4.TabIndex = 88
@@ -103,6 +106,10 @@ Partial Class Delete
         'Panel1
         '
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.StatusLabel)
+        Me.Panel1.Controls.Add(Me.LevelDeleteCheckBox)
+        Me.Panel1.Controls.Add(Me.FlowDeleteCheckBox)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.DeleteButton)
@@ -110,17 +117,48 @@ Partial Class Delete
         Me.Panel1.Controls.Add(Me.CancelButton1)
         Me.Panel1.Location = New System.Drawing.Point(12, 12)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(286, 91)
+        Me.Panel1.Size = New System.Drawing.Size(286, 168)
         Me.Panel1.TabIndex = 89
+        '
+        'FlowDeleteCheckBox
+        '
+        Me.FlowDeleteCheckBox.AutoSize = True
+        Me.FlowDeleteCheckBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FlowDeleteCheckBox.Location = New System.Drawing.Point(84, 15)
+        Me.FlowDeleteCheckBox.Name = "FlowDeleteCheckBox"
+        Me.FlowDeleteCheckBox.Size = New System.Drawing.Size(129, 19)
+        Me.FlowDeleteCheckBox.TabIndex = 89
+        Me.FlowDeleteCheckBox.Text = "Water Flow data"
+        Me.FlowDeleteCheckBox.UseVisualStyleBackColor = True
+        '
+        'LevelDeleteCheckBox
+        '
+        Me.LevelDeleteCheckBox.AutoSize = True
+        Me.LevelDeleteCheckBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LevelDeleteCheckBox.Location = New System.Drawing.Point(84, 40)
+        Me.LevelDeleteCheckBox.Name = "LevelDeleteCheckBox"
+        Me.LevelDeleteCheckBox.Size = New System.Drawing.Size(133, 19)
+        Me.LevelDeleteCheckBox.TabIndex = 90
+        Me.LevelDeleteCheckBox.Text = "Water Level data"
+        Me.LevelDeleteCheckBox.UseVisualStyleBackColor = True
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(21, 15)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(57, 15)
+        Me.Label2.TabIndex = 91
+        Me.Label2.Text = "Delete :"
         '
         'Delete
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(182, Byte), Integer), CType(CType(216, Byte), Integer), CType(CType(205, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(314, 115)
+        Me.ClientSize = New System.Drawing.Size(314, 192)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.StatusLabel)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Delete"
@@ -130,7 +168,6 @@ Partial Class Delete
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents Label1 As System.Windows.Forms.Label
@@ -141,4 +178,7 @@ Partial Class Delete
     Friend WithEvents StatusLabel As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents LevelDeleteCheckBox As System.Windows.Forms.CheckBox
+    Friend WithEvents FlowDeleteCheckBox As System.Windows.Forms.CheckBox
 End Class

@@ -12,8 +12,9 @@ Public Class MainForm
 
     'Public Shared TemperatureProcess As String
 
-    Dim IsHardCompressorX3Pressed As Boolean = False
     Dim IsHardPumpX2Pressed As Boolean = False
+    Dim IsHardSolValX3Pressed As Boolean = False
+    Dim IsHardCompressorX4Pressed As Boolean = False
 
     Dim PumpY0 As String = "0"
     Dim SolenoidValveY1 As String = "0"
@@ -46,8 +47,8 @@ Public Class MainForm
     Public DerivativeConstant As Double = 30 / 50 * 1
     Public IntegralConstant As Double = 30 * 80 / 1
 
-    Public FlowValue As Double
-    Public CurrentLevel As Double
+    Public FlowValue As Integer
+    Public LevelValue As Integer
 
     Dim Logging As Boolean = False
 
@@ -144,6 +145,7 @@ Public Class MainForm
                 EthernetRecTimer.Enabled = True
                 DataScanTimer.Enabled = True
                 'LinkLedTimer.Enabled = True
+                SelectorPanel.Enabled = False
             Else
                 Ethernet.Send("A00000000000000000")
                 AllOFF()
@@ -153,6 +155,7 @@ Public Class MainForm
                 EthernetSendTimer.Enabled = False
                 EthernetRecTimer.Enabled = False
                 DataScanTimer.Enabled = False
+                SelectorPanel.Enabled = True
                 'LinkLedTimer.Enabled = False
                 'LinkLedPictureBox.BackgroundImage = My.Resources.green_led_off
                 'IsLinkLedOn = False
@@ -276,19 +279,21 @@ Public Class MainForm
             If StringCollector.Substring(25, 1) = "0" Then
                 'PressureCurrentLabel.Text = ((CDbl(StringCollector.Substring(1, 8)) * 5) / 16777215).ToString("00.0000")
                 'CurrentPressureValue = CDbl(PressureCurrentLabel.Text)
-                FlowValue = (CDbl(StringCollector.Substring(1, 8)) * 5) / 16777215
-                FlowValue = FlowValue * 1000 / 120 ' Covert ADC voltage to current (mA) having 120E resistance
-                WaterFlowSystem1.FlowCurrentValue = FlowValue
-                FlowCurrentLabel.Text = FlowValue.ToString("0.0")
-                FlowValue = FormatNumber((FlowValue - 4) * 1000 / 16, 1) ' Scaling of 4mA to 20mA with 0 (Ltr/Hr) to 1000 (Ltr/Min)
+                Dim FlowCurrent As Double
+                FlowCurrent = (CDbl(StringCollector.Substring(1, 8)) * 5) / 16777215
+                FlowCurrent = FormatNumber(FlowCurrent * 1000 / 120, 1) ' Covert ADC voltage to current (mA) having 120E resistance
+                WaterFlowSystem1.FlowCurrentValue = FlowCurrent
+                FlowCurrentLabel.Text = FlowCurrent.ToString("00.0")
+                FlowValue = CInt((FlowCurrent - 4) * 1000 / 16) ' Scaling of 4mA to 20mA with 0 (Ltr/Hr) to 1000 (Ltr/Min)
                 'WaterFlowSystem1.FlowValuevalue = FlowValue
-                FlowDigi.DigitText = CInt(FlowValue)
+                FlowDigi.DigitText = FlowValue
             ElseIf StringCollector.Substring(25, 1) = "1" Then
-                CurrentLevel = (CDbl(StringCollector.Substring(1, 8)) * 5) / 16777215
-                CurrentLevel = FormatNumber(CurrentLevel * 1000 / 120, 1) ' Covert ADC voltage to current (mA) having 120E resistance
-                CurrentLevel = (CurrentLevel - 4) * 100 / 16 ' Scaling 4ma to 20mA to 0% to 100% water level
-                If WaterFlowSystem1.WaterLevel <> CInt(CurrentLevel) Then
-                WaterFlowSystem1.WaterLevel = CInt(CurrentLevel)
+                Dim LevelCurrent As Double
+                LevelCurrent = (CDbl(StringCollector.Substring(1, 8)) * 5) / 16777215
+                LevelCurrent = FormatNumber(LevelCurrent * 1000 / 120, 1) ' Covert ADC voltage to current (mA) having 120E resistance
+                LevelValue = (LevelCurrent - 4) * 100 / 16 ' Scaling 4ma to 20mA to 0% to 100% water level
+                If WaterFlowSystem1.WaterLevel <> LevelValue Then
+                    WaterFlowSystem1.WaterLevel = LevelValue
                 End If
                 'LevelDigi.DigitText = CInt(CurrentLevel)
             End If
@@ -299,24 +304,6 @@ Public Class MainForm
             '------------------------ Check if process is open loop or close loop (auto/manual) -----------------------------------------'
             If IsAutoSelected = True Then
                 Flow_P_PI_PID_Operation()
-                '--------------------- Check if process is ON/OFF or P PI PID -----------------------------------------'
-                'If ControlSettingsForm.onoffradio.Checked = True Then
-                '    'If FlowValue < FlowSPUpDown.Value - Hysterisis Then
-                '    '    Switch_Pump(True)
-                '    '    Open_ControlValve(0)
-                '    'ElseIf FlowValue > FlowSPUpDown.Value + Hysterisis Then
-                '    '    Switch_Pump(False)
-                '    '    Open_ControlValve(10)
-                '    'Else
-                '    '    Switch_Pump(False)
-                '    '    'CompressorY2 = "0"
-                '    '    'CompressorLed.BackgroundImage = My.Resources.green_led_off
-                '    '    Open_ControlValve(0)
-                '    'End If
-                'Else
-                '------------------- P PI PID Prcoess -------------------------------'
-                '   Flow_P_PI_PID_Operation()
-                'End If
             End If
 
         ElseIf StringCollector.Length > 30 Then
@@ -365,12 +352,26 @@ Public Class MainForm
         Open_ControlValve(CalculatedValveOpening)
     End Sub
 
+    Dim IsFlowSelected As Boolean = False
+    Private Sub SelectorPanel_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles SelectorPanel.Click, LevelSelectionImage.Click, FlowSelectionImage.Click
+        If IsFlowSelected = True Then
+            LevelSelectionImage.Visible = True
+            FlowSelectionImage.Visible = False
+            LevelContainerPanel.Visible = True
+            FlowContainerPanel.Visible = False
+            IsFlowSelected = False
+        Else
+            LevelSelectionImage.Visible = False
+            FlowSelectionImage.Visible = True
+            LevelContainerPanel.Visible = False
+            FlowContainerPanel.Visible = True
+            IsFlowSelected = True
+        End If
+    End Sub
 
     Private Sub DataScanTimer_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DataScanTimer.Tick
         If IsStartPressed = False Then Exit Sub
-
-        FlowAlarmCheck()
-
+        AlarmCheck()
         Dim CurrentDateTime As DateTime = DateTime.Now
         FlowGraph.RestoreScale(FlowGraph.GraphPane)
         With FlowGraph.GraphPane.XAxis
@@ -404,7 +405,7 @@ Public Class MainForm
         SQLConnection.ConnectionString = SQLConnectionString
         Try
             SQLConnection.Open()
-            SQLCommand = New MySqlCommand("insert into " + FlowTableName + "(datetime,SetPoint,FlowValue) values('" + dt + "'," + FlowSPUpDown.Value.ToString + "," + CInt(FlowValue).ToString + ");", SQLConnection)
+            SQLCommand = New MySqlCommand("insert into " + FlowTableName + "(datetime,SetPoint,FlowValue) values('" + dt + "'," + FlowSPUpDown.Value.ToString + "," + FlowValue.ToString + ");", SQLConnection)
             SQLCommand.ExecuteReader()
             SQLConnection.Close()
         Catch ex As Exception
@@ -417,7 +418,7 @@ Public Class MainForm
 
         Try
             SQLConnection.Open()
-            SQLCommand = New MySqlCommand("insert into " + LevelTableName + "(datetime,SetPoint,LevelValue) values('" + dt + "'," + LevelSPUpDown.Value.ToString + "," + CInt(CurrentLevel).ToString + ");", SQLConnection)
+            SQLCommand = New MySqlCommand("insert into " + LevelTableName + "(datetime,SetPoint,LevelValue) values('" + dt + "'," + LevelSPUpDown.Value.ToString + "," + LevelValue.ToString + ");", SQLConnection)
             SQLCommand.ExecuteReader()
             SQLConnection.Close()
         Catch ex As Exception
@@ -460,20 +461,27 @@ Public Class MainForm
             IsHardPumpX2Pressed = False
         End If
 
-        If DI.Substring(3, 1) = "1" And IsHardCompressorX3Pressed = False Then
-            IsHardCompressorX3Pressed = True
+        If DI.Substring(3, 1) = "1" And IsHardSolValX3Pressed = False Then
+            IsHardSolValX3Pressed = True
+            If SolenoidValveY1 = "1" Then
+                Switch_SolenoidValve(False)
+            Else
+                Switch_SolenoidValve(True)
+            End If
+        ElseIf DI.Substring(3, 1) = "0" Then
+            IsHardSolValX3Pressed = False
+        End If
+
+        If DI.Substring(4, 1) = "1" And IsHardCompressorX4Pressed = False Then
+            IsHardCompressorX4Pressed = True
             If CompressorY2 = "1" Then
                 Switch_Compressor(False)
             Else
                 Switch_Compressor(True)
             End If
-        ElseIf DI.Substring(3, 1) = "0" Then
-            IsHardCompressorX3Pressed = False
+        ElseIf DI.Substring(4, 1) = "0" Then
+            IsHardCompressorX4Pressed = False
         End If
-
-
-
-
     End Sub
 
 
@@ -628,7 +636,7 @@ Public Class MainForm
         End If
         Try
             If (Ethernet.IsConnected()) Then
-                Ethernet.Send("A" + ChannelNumber.ToString("0") + BuzzerY4 + VisualIndicatorY3 + PumpY0 + CompressorY2 + "0000" + ControlValveDAC0.ToString("0000") + "0000")
+                Ethernet.Send("A" + ChannelNumber.ToString("0") + PumpY0 + SolenoidValveY1 + CompressorY2 + VisualIndicatorY3 + BuzzerY4 + "000" + ControlValveDAC0.ToString("0000") + "0000")
                 ' "A" + ChannelNumber +  Digital Output (8)+ DAC1.ToString("0000") + DAC2.ToString("0000")
                 'ChannelNumber += 1
                 'If ChannelNumber > 1 Then ChannelNumber = 0
@@ -798,20 +806,35 @@ Public Class MainForm
     End Sub
 
 
-    Private Sub FlowAlarmCheck()
+    Private Sub AlarmCheck()
+        Dim IsFlowAlarmValueAchieved As Boolean = False
         If SetAlarm.FlowAlarmTable.Rows.Count <= 0 Then Exit Sub
-        Dim IsAlarmFlowValueAchieved As Boolean = False
         Dim i As Integer
         For i = 0 To SetAlarm.FlowAlarmTable.Rows.Count - 1
-            If (CInt(FlowValue) = CInt(SetAlarm.FlowAlarmTable.Item(0, i).Value)) Then
-                IsAlarmFlowValueAchieved = True
+            If (FlowValue = CInt(SetAlarm.FlowAlarmTable.Item(0, i).Value)) Then
+                IsFlowAlarmValueAchieved = True
             End If
         Next
-        If IsAlarmFlowValueAchieved = True Then
-            Switch_Buzzer(True)
+        If IsFlowAlarmValueAchieved = True Then
             FlowPanel.BackColor = Color.CornflowerBlue
+            Switch_Buzzer(True)
         Else
             FlowPanel.BackColor = Color.Transparent
+            Switch_Buzzer(False)
+        End If
+
+        Dim IsLevelAlarmValueAchieved As Boolean = False
+        If SetAlarm.LevelAlarmTable.Rows.Count <= 0 Then Exit Sub
+        For i = 0 To SetAlarm.LevelAlarmTable.Rows.Count - 1
+            If (LevelValue = CInt(SetAlarm.LevelAlarmTable.Item(0, i).Value)) Then
+                IsLevelAlarmValueAchieved = True
+            End If
+        Next
+        If IsLevelAlarmValueAchieved = True Then
+            LevelPanel.BackColor = Color.CornflowerBlue
+            Switch_Buzzer(True)
+        Else
+            LevelPanel.BackColor = Color.Transparent
             Switch_Buzzer(False)
         End If
     End Sub

@@ -49,8 +49,24 @@ Partial Class search
         Me.sp = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.flow = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FlowGraph = New ZedGraph.ZedGraphControl()
+        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.FlowTab = New System.Windows.Forms.TabPage()
+        Me.LevelTab = New System.Windows.Forms.TabPage()
+        Me.LevelTable = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LevelGraph = New ZedGraph.ZedGraphControl()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.LevelSearchCheckBox = New System.Windows.Forms.CheckBox()
+        Me.FlowSearchCheckBox = New System.Windows.Forms.CheckBox()
         Me.WaitPanel.SuspendLayout()
         CType(Me.FlowTable, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabControl1.SuspendLayout()
+        Me.FlowTab.SuspendLayout()
+        Me.LevelTab.SuspendLayout()
+        CType(Me.LevelTable, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label3
@@ -142,7 +158,7 @@ Partial Class search
         Me.WaitPanel.Controls.Add(Me.Label8)
         Me.WaitPanel.Controls.Add(Me.TerminateButton)
         Me.WaitPanel.Controls.Add(Me.ProgressBar1)
-        Me.WaitPanel.Location = New System.Drawing.Point(109, 219)
+        Me.WaitPanel.Location = New System.Drawing.Point(99, 211)
         Me.WaitPanel.Name = "WaitPanel"
         Me.WaitPanel.Size = New System.Drawing.Size(427, 75)
         Me.WaitPanel.TabIndex = 83
@@ -234,7 +250,7 @@ Partial Class search
         Me.FlowTable.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.dt, Me.tm, Me.sp, Me.flow})
         Me.FlowTable.Location = New System.Drawing.Point(2, 2)
         Me.FlowTable.Name = "FlowTable"
-        Me.FlowTable.Size = New System.Drawing.Size(616, 459)
+        Me.FlowTable.Size = New System.Drawing.Size(605, 430)
         Me.FlowTable.TabIndex = 92
         Me.FlowTable.Visible = False
         '
@@ -275,18 +291,137 @@ Partial Class search
         Me.FlowGraph.ScrollMinX = 0.0R
         Me.FlowGraph.ScrollMinY = 0.0R
         Me.FlowGraph.ScrollMinY2 = 0.0R
-        Me.FlowGraph.Size = New System.Drawing.Size(616, 459)
+        Me.FlowGraph.Size = New System.Drawing.Size(605, 430)
         Me.FlowGraph.TabIndex = 91
+        '
+        'TabControl1
+        '
+        Me.TabControl1.Controls.Add(Me.FlowTab)
+        Me.TabControl1.Controls.Add(Me.LevelTab)
+        Me.TabControl1.Location = New System.Drawing.Point(2, 12)
+        Me.TabControl1.Name = "TabControl1"
+        Me.TabControl1.SelectedIndex = 0
+        Me.TabControl1.Size = New System.Drawing.Size(617, 456)
+        Me.TabControl1.TabIndex = 93
+        '
+        'FlowTab
+        '
+        Me.FlowTab.Controls.Add(Me.FlowTable)
+        Me.FlowTab.Controls.Add(Me.FlowGraph)
+        Me.FlowTab.Location = New System.Drawing.Point(4, 22)
+        Me.FlowTab.Name = "FlowTab"
+        Me.FlowTab.Padding = New System.Windows.Forms.Padding(3)
+        Me.FlowTab.Size = New System.Drawing.Size(609, 430)
+        Me.FlowTab.TabIndex = 0
+        Me.FlowTab.Text = "Flow"
+        Me.FlowTab.UseVisualStyleBackColor = True
+        '
+        'LevelTab
+        '
+        Me.LevelTab.Controls.Add(Me.LevelTable)
+        Me.LevelTab.Controls.Add(Me.LevelGraph)
+        Me.LevelTab.Location = New System.Drawing.Point(4, 22)
+        Me.LevelTab.Name = "LevelTab"
+        Me.LevelTab.Padding = New System.Windows.Forms.Padding(3)
+        Me.LevelTab.Size = New System.Drawing.Size(609, 430)
+        Me.LevelTab.TabIndex = 1
+        Me.LevelTab.Text = "Level"
+        Me.LevelTab.UseVisualStyleBackColor = True
+        '
+        'LevelTable
+        '
+        Me.LevelTable.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(182, Byte), Integer), CType(CType(216, Byte), Integer), CType(CType(205, Byte), Integer))
+        Me.LevelTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.LevelTable.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4})
+        Me.LevelTable.Location = New System.Drawing.Point(2, 2)
+        Me.LevelTable.Name = "LevelTable"
+        Me.LevelTable.Size = New System.Drawing.Size(605, 430)
+        Me.LevelTable.TabIndex = 94
+        Me.LevelTable.Visible = False
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.HeaderText = "Date"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.Width = 140
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Time"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.Width = 140
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Set Point"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.Width = 140
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.HeaderText = "Level"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.Width = 140
+        '
+        'LevelGraph
+        '
+        Me.LevelGraph.IsAntiAlias = True
+        Me.LevelGraph.IsZoomOnMouseCenter = True
+        Me.LevelGraph.Location = New System.Drawing.Point(2, 2)
+        Me.LevelGraph.Name = "LevelGraph"
+        Me.LevelGraph.ScrollGrace = 0.0R
+        Me.LevelGraph.ScrollMaxX = 0.0R
+        Me.LevelGraph.ScrollMaxY = 0.0R
+        Me.LevelGraph.ScrollMaxY2 = 0.0R
+        Me.LevelGraph.ScrollMinX = 0.0R
+        Me.LevelGraph.ScrollMinY = 0.0R
+        Me.LevelGraph.ScrollMinY2 = 0.0R
+        Me.LevelGraph.Size = New System.Drawing.Size(605, 430)
+        Me.LevelGraph.TabIndex = 93
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(5, 539)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(60, 15)
+        Me.Label9.TabIndex = 96
+        Me.Label9.Text = "Search :"
+        '
+        'LevelSearchCheckBox
+        '
+        Me.LevelSearchCheckBox.AutoSize = True
+        Me.LevelSearchCheckBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LevelSearchCheckBox.Location = New System.Drawing.Point(168, 541)
+        Me.LevelSearchCheckBox.Name = "LevelSearchCheckBox"
+        Me.LevelSearchCheckBox.Size = New System.Drawing.Size(92, 19)
+        Me.LevelSearchCheckBox.TabIndex = 95
+        Me.LevelSearchCheckBox.Text = "Level data"
+        Me.LevelSearchCheckBox.UseVisualStyleBackColor = True
+        '
+        'FlowSearchCheckBox
+        '
+        Me.FlowSearchCheckBox.AutoSize = True
+        Me.FlowSearchCheckBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FlowSearchCheckBox.Location = New System.Drawing.Point(74, 540)
+        Me.FlowSearchCheckBox.Name = "FlowSearchCheckBox"
+        Me.FlowSearchCheckBox.Size = New System.Drawing.Size(88, 19)
+        Me.FlowSearchCheckBox.TabIndex = 94
+        Me.FlowSearchCheckBox.Text = "Flow data"
+        Me.FlowSearchCheckBox.UseVisualStyleBackColor = True
         '
         'search
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(182, Byte), Integer), CType(CType(216, Byte), Integer), CType(CType(205, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(620, 566)
+        Me.ClientSize = New System.Drawing.Size(620, 571)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.LevelSearchCheckBox)
+        Me.Controls.Add(Me.FlowSearchCheckBox)
         Me.Controls.Add(Me.WaitPanel)
-        Me.Controls.Add(Me.FlowTable)
-        Me.Controls.Add(Me.FlowGraph)
+        Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label5)
@@ -311,6 +446,10 @@ Partial Class search
         Me.WaitPanel.ResumeLayout(False)
         Me.WaitPanel.PerformLayout()
         CType(Me.FlowTable, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabControl1.ResumeLayout(False)
+        Me.FlowTab.ResumeLayout(False)
+        Me.LevelTab.ResumeLayout(False)
+        CType(Me.LevelTable, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -340,4 +479,16 @@ Partial Class search
     Friend WithEvents tm As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents sp As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents flow As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
+    Friend WithEvents FlowTab As System.Windows.Forms.TabPage
+    Friend WithEvents LevelTab As System.Windows.Forms.TabPage
+    Friend WithEvents LevelTable As System.Windows.Forms.DataGridView
+    Friend WithEvents LevelGraph As ZedGraph.ZedGraphControl
+    Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents LevelSearchCheckBox As System.Windows.Forms.CheckBox
+    Friend WithEvents FlowSearchCheckBox As System.Windows.Forms.CheckBox
 End Class

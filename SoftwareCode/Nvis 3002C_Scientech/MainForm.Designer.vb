@@ -116,11 +116,16 @@ Partial Class MainForm
         Me.Label10 = New System.Windows.Forms.Label()
         Me.LevelSPDigi = New Owf.Controls.DigitalDisplayControl()
         Me.LevelSPUpDown = New System.Windows.Forms.NumericUpDown()
-        Me.Panel11 = New System.Windows.Forms.Panel()
+        Me.LevelPanel = New System.Windows.Forms.Panel()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.LevelCurrentLabel = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.LevelDigi = New Owf.Controls.DigitalDisplayControl()
+        Me.SelectorPanel = New System.Windows.Forms.Panel()
+        Me.LevelSelectionImage = New System.Windows.Forms.PictureBox()
+        Me.FlowSelectionImage = New System.Windows.Forms.PictureBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
         Me.MenuStrip.SuspendLayout()
         CType(Me.LinkLedPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.FlowPanel.SuspendLayout()
@@ -155,7 +160,10 @@ Partial Class MainForm
         Me.LevelContainerPanel.SuspendLayout()
         Me.Panel10.SuspendLayout()
         CType(Me.LevelSPUpDown, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel11.SuspendLayout()
+        Me.LevelPanel.SuspendLayout()
+        Me.SelectorPanel.SuspendLayout()
+        CType(Me.LevelSelectionImage, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FlowSelectionImage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label12
@@ -1023,7 +1031,7 @@ Partial Class MainForm
         '
         Me.FlowContainerPanel.Controls.Add(Me.Panel5)
         Me.FlowContainerPanel.Controls.Add(Me.FlowPanel)
-        Me.FlowContainerPanel.Location = New System.Drawing.Point(805, 405)
+        Me.FlowContainerPanel.Location = New System.Drawing.Point(805, 426)
         Me.FlowContainerPanel.Name = "FlowContainerPanel"
         Me.FlowContainerPanel.Size = New System.Drawing.Size(180, 120)
         Me.FlowContainerPanel.TabIndex = 102
@@ -1031,8 +1039,8 @@ Partial Class MainForm
         'LevelContainerPanel
         '
         Me.LevelContainerPanel.Controls.Add(Me.Panel10)
-        Me.LevelContainerPanel.Controls.Add(Me.Panel11)
-        Me.LevelContainerPanel.Location = New System.Drawing.Point(805, 537)
+        Me.LevelContainerPanel.Controls.Add(Me.LevelPanel)
+        Me.LevelContainerPanel.Location = New System.Drawing.Point(806, 426)
         Me.LevelContainerPanel.Name = "LevelContainerPanel"
         Me.LevelContainerPanel.Size = New System.Drawing.Size(180, 120)
         Me.LevelContainerPanel.TabIndex = 103
@@ -1080,17 +1088,17 @@ Partial Class MainForm
         Me.LevelSPUpDown.TabIndex = 79
         Me.LevelSPUpDown.Value = New Decimal(New Integer() {200, 0, 0, 0})
         '
-        'Panel11
+        'LevelPanel
         '
-        Me.Panel11.BackColor = System.Drawing.Color.Transparent
-        Me.Panel11.Controls.Add(Me.Label13)
-        Me.Panel11.Controls.Add(Me.LevelCurrentLabel)
-        Me.Panel11.Controls.Add(Me.Label15)
-        Me.Panel11.Controls.Add(Me.LevelDigi)
-        Me.Panel11.Location = New System.Drawing.Point(4, 57)
-        Me.Panel11.Name = "Panel11"
-        Me.Panel11.Size = New System.Drawing.Size(168, 57)
-        Me.Panel11.TabIndex = 87
+        Me.LevelPanel.BackColor = System.Drawing.Color.Transparent
+        Me.LevelPanel.Controls.Add(Me.Label13)
+        Me.LevelPanel.Controls.Add(Me.LevelCurrentLabel)
+        Me.LevelPanel.Controls.Add(Me.Label15)
+        Me.LevelPanel.Controls.Add(Me.LevelDigi)
+        Me.LevelPanel.Location = New System.Drawing.Point(4, 57)
+        Me.LevelPanel.Name = "LevelPanel"
+        Me.LevelPanel.Size = New System.Drawing.Size(168, 57)
+        Me.LevelPanel.TabIndex = 87
         '
         'Label13
         '
@@ -1134,6 +1142,60 @@ Partial Class MainForm
         Me.LevelDigi.Size = New System.Drawing.Size(67, 31)
         Me.LevelDigi.TabIndex = 17
         '
+        'SelectorPanel
+        '
+        Me.SelectorPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.SelectorPanel.Controls.Add(Me.LevelSelectionImage)
+        Me.SelectorPanel.Controls.Add(Me.FlowSelectionImage)
+        Me.SelectorPanel.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.SelectorPanel.Location = New System.Drawing.Point(857, 563)
+        Me.SelectorPanel.Name = "SelectorPanel"
+        Me.SelectorPanel.Size = New System.Drawing.Size(79, 71)
+        Me.SelectorPanel.TabIndex = 104
+        '
+        'LevelSelectionImage
+        '
+        Me.LevelSelectionImage.Image = CType(resources.GetObject("LevelSelectionImage.Image"), System.Drawing.Image)
+        Me.LevelSelectionImage.Location = New System.Drawing.Point(16, 8)
+        Me.LevelSelectionImage.Name = "LevelSelectionImage"
+        Me.LevelSelectionImage.Size = New System.Drawing.Size(54, 50)
+        Me.LevelSelectionImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.LevelSelectionImage.TabIndex = 1
+        Me.LevelSelectionImage.TabStop = False
+        '
+        'FlowSelectionImage
+        '
+        Me.FlowSelectionImage.Image = CType(resources.GetObject("FlowSelectionImage.Image"), System.Drawing.Image)
+        Me.FlowSelectionImage.Location = New System.Drawing.Point(10, 9)
+        Me.FlowSelectionImage.Name = "FlowSelectionImage"
+        Me.FlowSelectionImage.Size = New System.Drawing.Size(54, 50)
+        Me.FlowSelectionImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.FlowSelectionImage.TabIndex = 0
+        Me.FlowSelectionImage.TabStop = False
+        Me.FlowSelectionImage.Visible = False
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Location = New System.Drawing.Point(794, 579)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(58, 30)
+        Me.Label14.TabIndex = 105
+        Me.Label14.Text = "Flow" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Process"
+        Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.Location = New System.Drawing.Point(942, 579)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(58, 30)
+        Me.Label16.TabIndex = 106
+        Me.Label16.Text = "Level" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Process"
+        Me.Label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1141,6 +1203,9 @@ Partial Class MainForm
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(182, Byte), Integer), CType(CType(216, Byte), Integer), CType(CType(205, Byte), Integer))
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1011, 669)
+        Me.Controls.Add(Me.Label16)
+        Me.Controls.Add(Me.Label14)
+        Me.Controls.Add(Me.SelectorPanel)
         Me.Controls.Add(Me.LevelContainerPanel)
         Me.Controls.Add(Me.FlowContainerPanel)
         Me.Controls.Add(Me.Label3)
@@ -1211,8 +1276,11 @@ Partial Class MainForm
         Me.Panel10.ResumeLayout(False)
         Me.Panel10.PerformLayout()
         CType(Me.LevelSPUpDown, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel11.ResumeLayout(False)
-        Me.Panel11.PerformLayout()
+        Me.LevelPanel.ResumeLayout(False)
+        Me.LevelPanel.PerformLayout()
+        Me.SelectorPanel.ResumeLayout(False)
+        CType(Me.LevelSelectionImage, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FlowSelectionImage, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1309,10 +1377,15 @@ Partial Class MainForm
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents LevelSPDigi As Owf.Controls.DigitalDisplayControl
     Friend WithEvents LevelSPUpDown As System.Windows.Forms.NumericUpDown
-    Friend WithEvents Panel11 As System.Windows.Forms.Panel
+    Friend WithEvents LevelPanel As System.Windows.Forms.Panel
     Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents LevelCurrentLabel As System.Windows.Forms.Label
     Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents LevelDigi As Owf.Controls.DigitalDisplayControl
+    Friend WithEvents SelectorPanel As System.Windows.Forms.Panel
+    Friend WithEvents LevelSelectionImage As System.Windows.Forms.PictureBox
+    Friend WithEvents FlowSelectionImage As System.Windows.Forms.PictureBox
+    Friend WithEvents Label14 As System.Windows.Forms.Label
+    Friend WithEvents Label16 As System.Windows.Forms.Label
 
 End Class
