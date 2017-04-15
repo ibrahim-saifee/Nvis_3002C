@@ -1,0 +1,1 @@
+Database=Nvis3002B_1v0;Data Source=localhost;User Id=root;Password=control;Allow User Variables=True

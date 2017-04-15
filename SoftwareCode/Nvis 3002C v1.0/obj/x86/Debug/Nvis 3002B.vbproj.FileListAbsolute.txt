@@ -1,0 +1,133 @@
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002A v1.2 Menu_Simulated_Optimsed_NewStirrerPump_Link_Alarm_IP_NewDatabase\bin\Debug\Nvis 3002B.exe.config
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002A v1.2 Menu_Simulated_Optimsed_NewStirrerPump_Link_Alarm_IP_NewDatabase\bin\Debug\Nvis 3002B.exe
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002A v1.2 Menu_Simulated_Optimsed_NewStirrerPump_Link_Alarm_IP_NewDatabase\bin\Debug\Nvis 3002B.pdb
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002A v1.2 Menu_Simulated_Optimsed_NewStirrerPump_Link_Alarm_IP_NewDatabase\bin\Debug\Nvis 3002B.xml
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002A v1.2 Menu_Simulated_Optimsed_NewStirrerPump_Link_Alarm_IP_NewDatabase\obj\x86\Debug\ResolveAssemblyReference.cache
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002A v1.2 Menu_Simulated_Optimsed_NewStirrerPump_Link_Alarm_IP_NewDatabase\obj\x86\Debug\Nvis_3002B.About.resources
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002A v1.2 Menu_Simulated_Optimsed_NewStirrerPump_Link_Alarm_IP_NewDatabase\obj\x86\Debug\Nvis_3002B.DatabaseConnection.resources
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002A v1.2 Menu_Simulated_Optimsed_NewStirrerPump_Link_Alarm_IP_NewDatabase\obj\x86\Debug\Nvis_3002B.Delete.resources
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002A v1.2 Menu_Simulated_Optimsed_NewStirrerPump_Link_Alarm_IP_NewDatabase\obj\x86\Debug\Nvis_3002B.Ethernet.resources
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002A v1.2 Menu_Simulated_Optimsed_NewStirrerPump_Link_Alarm_IP_NewDatabase\obj\x86\Debug\Nvis_3002B.LTSettings.resources
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002A v1.2 Menu_Simulated_Optimsed_NewStirrerPump_Link_Alarm_IP_NewDatabase\obj\x86\Debug\Nvis_3002B.MainForm.resources
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002A v1.2 Menu_Simulated_Optimsed_NewStirrerPump_Link_Alarm_IP_NewDatabase\obj\x86\Debug\Nvis_3002B.Resources.resources
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002A v1.2 Menu_Simulated_Optimsed_NewStirrerPump_Link_Alarm_IP_NewDatabase\obj\x86\Debug\Nvis_3002B.search.resources
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002A v1.2 Menu_Simulated_Optimsed_NewStirrerPump_Link_Alarm_IP_NewDatabase\obj\x86\Debug\Nvis_3002B.SetAlarm.resources
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002A v1.2 Menu_Simulated_Optimsed_NewStirrerPump_Link_Alarm_IP_NewDatabase\obj\x86\Debug\Nvis_3002B.StopWatch.resources
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002A v1.2 Menu_Simulated_Optimsed_NewStirrerPump_Link_Alarm_IP_NewDatabase\obj\x86\Debug\Nvis_3002B.TTSettings.resources
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002A v1.2 Menu_Simulated_Optimsed_NewStirrerPump_Link_Alarm_IP_NewDatabase\obj\x86\Debug\GenerateResource.read.1.tlog
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002A v1.2 Menu_Simulated_Optimsed_NewStirrerPump_Link_Alarm_IP_NewDatabase\obj\x86\Debug\GenerateResource.write.1.tlog
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002A v1.2 Menu_Simulated_Optimsed_NewStirrerPump_Link_Alarm_IP_NewDatabase\obj\x86\Debug\Nvis 3002B.exe
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002A v1.2 Menu_Simulated_Optimsed_NewStirrerPump_Link_Alarm_IP_NewDatabase\obj\x86\Debug\Nvis 3002B.xml
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002A v1.2 Menu_Simulated_Optimsed_NewStirrerPump_Link_Alarm_IP_NewDatabase\obj\x86\Debug\Nvis 3002B.pdb
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0\bin\Debug\Nvis 3002B.exe.config
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0\obj\x86\Debug\Nvis 3002B.exe
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0\obj\x86\Debug\Nvis 3002B.xml
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0\obj\x86\Debug\Nvis 3002B.pdb
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0\bin\Debug\Nvis 3002B.exe
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0\bin\Debug\Nvis 3002B.pdb
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0\bin\Debug\Nvis 3002B.xml
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0\obj\x86\Debug\ResolveAssemblyReference.cache
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0\obj\x86\Debug\Nvis_3002B.About.resources
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0\obj\x86\Debug\Nvis_3002B.DatabaseConnection.resources
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0\obj\x86\Debug\Nvis_3002B.Delete.resources
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0\obj\x86\Debug\Nvis_3002B.Ethernet.resources
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0\obj\x86\Debug\Nvis_3002B.LTSettings.resources
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0\obj\x86\Debug\Nvis_3002B.MainForm.resources
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0\obj\x86\Debug\Nvis_3002B.Resources.resources
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0\obj\x86\Debug\Nvis_3002B.search.resources
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0\obj\x86\Debug\Nvis_3002B.SetAlarm.resources
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0\obj\x86\Debug\Nvis_3002B.StopWatch.resources
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0\obj\x86\Debug\Nvis_3002B.TTSettings.resources
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0\obj\x86\Debug\GenerateResource.read.1.tlog
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Rough\Nvis 3002B v1.0\bin\Debug\Nvis 3002B.exe.config
+D:\Rough\Nvis 3002B v1.0\obj\x86\Debug\Nvis 3002B.exe
+D:\Rough\Nvis 3002B v1.0\obj\x86\Debug\Nvis 3002B.xml
+D:\Rough\Nvis 3002B v1.0\obj\x86\Debug\Nvis 3002B.pdb
+D:\Rough\Nvis 3002B v1.0\bin\Debug\Nvis 3002B.exe
+D:\Rough\Nvis 3002B v1.0\bin\Debug\Nvis 3002B.pdb
+D:\Rough\Nvis 3002B v1.0\bin\Debug\Nvis 3002B.xml
+D:\Rough\Nvis 3002B v1.0\obj\x86\Debug\Nvis_3002B.About.resources
+D:\Rough\Nvis 3002B v1.0\obj\x86\Debug\Nvis_3002B.DatabaseConnection.resources
+D:\Rough\Nvis 3002B v1.0\obj\x86\Debug\Nvis_3002B.Delete.resources
+D:\Rough\Nvis 3002B v1.0\obj\x86\Debug\Nvis_3002B.Ethernet.resources
+D:\Rough\Nvis 3002B v1.0\obj\x86\Debug\Nvis_3002B.LTSettings.resources
+D:\Rough\Nvis 3002B v1.0\obj\x86\Debug\Nvis_3002B.MainForm.resources
+D:\Rough\Nvis 3002B v1.0\obj\x86\Debug\Nvis_3002B.Resources.resources
+D:\Rough\Nvis 3002B v1.0\obj\x86\Debug\Nvis_3002B.search.resources
+D:\Rough\Nvis 3002B v1.0\obj\x86\Debug\Nvis_3002B.SetAlarm.resources
+D:\Rough\Nvis 3002B v1.0\obj\x86\Debug\Nvis_3002B.StopWatch.resources
+D:\Rough\Nvis 3002B v1.0\obj\x86\Debug\Nvis_3002B.TTSettings.resources
+D:\Rough\Nvis 3002B v1.0\obj\x86\Debug\Nvis 3002B.vbproj.GenerateResource.Cache
+D:\Rough\Nvis 3002B v1.0\obj\x86\Debug\Nvis 3002B.vbprojResolveAssemblyReference.cache
+C:\Documents and Settings\saksham\Desktop\Nvis 3002B v1.0\bin\Debug\Nvis 3002B.exe.config
+C:\Documents and Settings\saksham\Desktop\Nvis 3002B v1.0\obj\x86\Debug\Nvis 3002B.exe
+C:\Documents and Settings\saksham\Desktop\Nvis 3002B v1.0\obj\x86\Debug\Nvis 3002B.xml
+C:\Documents and Settings\saksham\Desktop\Nvis 3002B v1.0\obj\x86\Debug\Nvis 3002B.pdb
+C:\Documents and Settings\saksham\Desktop\Nvis 3002B v1.0\bin\Debug\Nvis 3002B.exe
+C:\Documents and Settings\saksham\Desktop\Nvis 3002B v1.0\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\saksham\Desktop\Nvis 3002B v1.0\obj\x86\Debug\Nvis_3002B.About.resources
+C:\Documents and Settings\saksham\Desktop\Nvis 3002B v1.0\obj\x86\Debug\Nvis_3002B.DatabaseConnection.resources
+C:\Documents and Settings\saksham\Desktop\Nvis 3002B v1.0\obj\x86\Debug\Nvis_3002B.Delete.resources
+C:\Documents and Settings\saksham\Desktop\Nvis 3002B v1.0\obj\x86\Debug\Nvis_3002B.Ethernet.resources
+C:\Documents and Settings\saksham\Desktop\Nvis 3002B v1.0\obj\x86\Debug\Nvis_3002B.LTSettings.resources
+C:\Documents and Settings\saksham\Desktop\Nvis 3002B v1.0\obj\x86\Debug\Nvis_3002B.MainForm.resources
+C:\Documents and Settings\saksham\Desktop\Nvis 3002B v1.0\obj\x86\Debug\Nvis_3002B.Resources.resources
+C:\Documents and Settings\saksham\Desktop\Nvis 3002B v1.0\obj\x86\Debug\Nvis_3002B.search.resources
+C:\Documents and Settings\saksham\Desktop\Nvis 3002B v1.0\obj\x86\Debug\Nvis_3002B.SetAlarm.resources
+C:\Documents and Settings\saksham\Desktop\Nvis 3002B v1.0\obj\x86\Debug\Nvis_3002B.StopWatch.resources
+C:\Documents and Settings\saksham\Desktop\Nvis 3002B v1.0\obj\x86\Debug\Nvis_3002B.TTSettings.resources
+C:\Documents and Settings\saksham\Desktop\Nvis 3002B v1.0\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\saksham\Desktop\Nvis 3002B v1.0\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\saksham\Desktop\Nvis 3002B v1.0\bin\Debug\Nvis 3002B.pdb
+C:\Documents and Settings\saksham\Desktop\Nvis 3002B v1.0\bin\Debug\Nvis 3002B.xml
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0_LedCorrected_Managed\bin\Debug\Nvis 3002B.exe.config
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0_LedCorrected_Managed\obj\x86\Debug\Nvis 3002B.exe
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0_LedCorrected_Managed\obj\x86\Debug\Nvis 3002B.xml
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0_LedCorrected_Managed\obj\x86\Debug\Nvis 3002B.pdb
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0_LedCorrected_Managed\bin\Debug\Nvis 3002B.exe
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0_LedCorrected_Managed\bin\Debug\Nvis 3002B.pdb
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0_LedCorrected_Managed\bin\Debug\Nvis 3002B.xml
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0_LedCorrected_Managed\obj\x86\Debug\ResolveAssemblyReference.cache
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0_LedCorrected_Managed\obj\x86\Debug\Nvis_3002B.About.resources
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0_LedCorrected_Managed\obj\x86\Debug\Nvis_3002B.DatabaseConnection.resources
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0_LedCorrected_Managed\obj\x86\Debug\Nvis_3002B.Delete.resources
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0_LedCorrected_Managed\obj\x86\Debug\Nvis_3002B.Ethernet.resources
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0_LedCorrected_Managed\obj\x86\Debug\Nvis_3002B.LTSettings.resources
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0_LedCorrected_Managed\obj\x86\Debug\Nvis_3002B.MainForm.resources
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0_LedCorrected_Managed\obj\x86\Debug\Nvis_3002B.Resources.resources
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0_LedCorrected_Managed\obj\x86\Debug\Nvis_3002B.search.resources
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0_LedCorrected_Managed\obj\x86\Debug\Nvis_3002B.SetAlarm.resources
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0_LedCorrected_Managed\obj\x86\Debug\Nvis_3002B.StopWatch.resources
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0_LedCorrected_Managed\obj\x86\Debug\Nvis_3002B.TTSettings.resources
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0_LedCorrected_Managed\obj\x86\Debug\GenerateResource.read.1.tlog
+G:\ibrahim\VB.NET\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0_LedCorrected_Managed\obj\x86\Debug\GenerateResource.write.1.tlog
+G:\ibrahim\Nvis Softwares\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0_LedCorrected_Managed\bin\Debug\Nvis 3002B.exe.config
+G:\ibrahim\Nvis Softwares\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0_LedCorrected_Managed\obj\x86\Debug\Nvis 3002B.exe
+G:\ibrahim\Nvis Softwares\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0_LedCorrected_Managed\obj\x86\Debug\Nvis 3002B.xml
+G:\ibrahim\Nvis Softwares\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0_LedCorrected_Managed\obj\x86\Debug\Nvis 3002B.pdb
+G:\ibrahim\Nvis Softwares\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0_LedCorrected_Managed\bin\Debug\Nvis 3002B.exe
+G:\ibrahim\Nvis Softwares\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0_LedCorrected_Managed\bin\Debug\Nvis 3002B.pdb
+G:\ibrahim\Nvis Softwares\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0_LedCorrected_Managed\bin\Debug\Nvis 3002B.xml
+G:\ibrahim\Nvis Softwares\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0_LedCorrected_Managed\obj\x86\Debug\ResolveAssemblyReference.cache
+G:\ibrahim\Nvis Softwares\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0_LedCorrected_Managed\obj\x86\Debug\Nvis_3002B.About.resources
+G:\ibrahim\Nvis Softwares\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0_LedCorrected_Managed\obj\x86\Debug\Nvis_3002B.DatabaseConnection.resources
+G:\ibrahim\Nvis Softwares\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0_LedCorrected_Managed\obj\x86\Debug\Nvis_3002B.Delete.resources
+G:\ibrahim\Nvis Softwares\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0_LedCorrected_Managed\obj\x86\Debug\Nvis_3002B.Ethernet.resources
+G:\ibrahim\Nvis Softwares\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0_LedCorrected_Managed\obj\x86\Debug\Nvis_3002B.LTSettings.resources
+G:\ibrahim\Nvis Softwares\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0_LedCorrected_Managed\obj\x86\Debug\Nvis_3002B.MainForm.resources
+G:\ibrahim\Nvis Softwares\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0_LedCorrected_Managed\obj\x86\Debug\Nvis_3002B.Resources.resources
+G:\ibrahim\Nvis Softwares\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0_LedCorrected_Managed\obj\x86\Debug\Nvis_3002B.search.resources
+G:\ibrahim\Nvis Softwares\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0_LedCorrected_Managed\obj\x86\Debug\Nvis_3002B.SetAlarm.resources
+G:\ibrahim\Nvis Softwares\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0_LedCorrected_Managed\obj\x86\Debug\Nvis_3002B.StopWatch.resources
+G:\ibrahim\Nvis Softwares\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0_LedCorrected_Managed\obj\x86\Debug\Nvis_3002B.TTSettings.resources
+G:\ibrahim\Nvis Softwares\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0_LedCorrected_Managed\obj\x86\Debug\GenerateResource.read.1.tlog
+G:\ibrahim\Nvis Softwares\Nvis 3002B\Nvis 3002B Source Code\Nvis 3002B v1.0_LedCorrected_Managed\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Office Work\Nvis 3002C_work\Nvis 3002C\Nvis 3002C v1.0\bin\Debug\Nvis 3002B.exe.config
+D:\Office Work\Nvis 3002C_work\Nvis 3002C\Nvis 3002C v1.0\obj\x86\Debug\Nvis 3002B.exe
+D:\Office Work\Nvis 3002C_work\Nvis 3002C\Nvis 3002C v1.0\obj\x86\Debug\Nvis 3002B.xml
+D:\Office Work\Nvis 3002C_work\Nvis 3002C\Nvis 3002C v1.0\obj\x86\Debug\Nvis 3002B.pdb
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis 3002C\Nvis 3002C v1.0\bin\Debug\Nvis 3002B.exe.config
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis 3002C\Nvis 3002C v1.0\obj\x86\Debug\Nvis 3002B.exe
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis 3002C\Nvis 3002C v1.0\obj\x86\Debug\Nvis 3002B.xml
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis 3002C\Nvis 3002C v1.0\obj\x86\Debug\Nvis 3002B.pdb

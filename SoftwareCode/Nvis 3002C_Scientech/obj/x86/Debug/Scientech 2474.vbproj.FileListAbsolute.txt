@@ -1,0 +1,88 @@
+E:\ibrahim\Scientech Softwares\Scientech 2474\bin\Debug\Scientech 2474.exe.config
+E:\ibrahim\Scientech Softwares\Scientech 2474\bin\Debug\Scientech 2474.exe
+E:\ibrahim\Scientech Softwares\Scientech 2474\bin\Debug\Scientech 2474.pdb
+E:\ibrahim\Scientech Softwares\Scientech 2474\bin\Debug\Scientech 2474.xml
+E:\ibrahim\Scientech Softwares\Scientech 2474\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\ibrahim\Scientech Softwares\Scientech 2474\obj\x86\Debug\Scientech_2474.ControlSettingsForm.resources
+E:\ibrahim\Scientech Softwares\Scientech 2474\obj\x86\Debug\Scientech_2474.DatabaseConnection.resources
+E:\ibrahim\Scientech Softwares\Scientech 2474\obj\x86\Debug\Scientech_2474.Delete.resources
+E:\ibrahim\Scientech Softwares\Scientech 2474\obj\x86\Debug\Scientech_2474.Ethernet.resources
+E:\ibrahim\Scientech Softwares\Scientech 2474\obj\x86\Debug\Scientech_2474.MainForm.resources
+E:\ibrahim\Scientech Softwares\Scientech 2474\obj\x86\Debug\Scientech_2474.Resources.resources
+E:\ibrahim\Scientech Softwares\Scientech 2474\obj\x86\Debug\Scientech_2474.search.resources
+E:\ibrahim\Scientech Softwares\Scientech 2474\obj\x86\Debug\Scientech_2474.SetAlarm.resources
+E:\ibrahim\Scientech Softwares\Scientech 2474\obj\x86\Debug\Scientech_2474.StopWatch.resources
+E:\ibrahim\Scientech Softwares\Scientech 2474\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\ibrahim\Scientech Softwares\Scientech 2474\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\ibrahim\Scientech Softwares\Scientech 2474\obj\x86\Debug\Scientech 2474.exe
+E:\ibrahim\Scientech Softwares\Scientech 2474\obj\x86\Debug\Scientech 2474.xml
+E:\ibrahim\Scientech Softwares\Scientech 2474\obj\x86\Debug\Scientech 2474.pdb
+C:\Documents and Settings\saksham\Desktop\Workbench software\Scientech 2474 Updated\bin\Debug\Scientech 2474.exe.config
+C:\Documents and Settings\saksham\Desktop\Workbench software\Scientech 2474 Updated\obj\x86\Debug\Scientech 2474.exe
+C:\Documents and Settings\saksham\Desktop\Workbench software\Scientech 2474 Updated\obj\x86\Debug\Scientech 2474.xml
+C:\Documents and Settings\saksham\Desktop\Workbench software\Scientech 2474 Updated\obj\x86\Debug\Scientech 2474.pdb
+C:\Documents and Settings\saksham\Desktop\Workbench software\Scientech 2474 Updated\bin\Debug\Scientech 2474.exe
+C:\Documents and Settings\saksham\Desktop\Workbench software\Scientech 2474 Updated\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\saksham\Desktop\Workbench software\Scientech 2474 Updated\obj\x86\Debug\Scientech_2474.ControlSettingsForm.resources
+C:\Documents and Settings\saksham\Desktop\Workbench software\Scientech 2474 Updated\obj\x86\Debug\Scientech_2474.DatabaseConnection.resources
+C:\Documents and Settings\saksham\Desktop\Workbench software\Scientech 2474 Updated\obj\x86\Debug\Scientech_2474.Delete.resources
+C:\Documents and Settings\saksham\Desktop\Workbench software\Scientech 2474 Updated\obj\x86\Debug\Scientech_2474.Ethernet.resources
+C:\Documents and Settings\saksham\Desktop\Workbench software\Scientech 2474 Updated\obj\x86\Debug\Scientech_2474.MainForm.resources
+C:\Documents and Settings\saksham\Desktop\Workbench software\Scientech 2474 Updated\obj\x86\Debug\Scientech_2474.Resources.resources
+C:\Documents and Settings\saksham\Desktop\Workbench software\Scientech 2474 Updated\obj\x86\Debug\Scientech_2474.search.resources
+C:\Documents and Settings\saksham\Desktop\Workbench software\Scientech 2474 Updated\obj\x86\Debug\Scientech_2474.SetAlarm.resources
+C:\Documents and Settings\saksham\Desktop\Workbench software\Scientech 2474 Updated\obj\x86\Debug\Scientech_2474.StopWatch.resources
+C:\Documents and Settings\saksham\Desktop\Workbench software\Scientech 2474 Updated\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\saksham\Desktop\Workbench software\Scientech 2474 Updated\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\saksham\Desktop\Workbench software\Scientech 2474 Updated\bin\Debug\Scientech 2474.pdb
+C:\Documents and Settings\saksham\Desktop\Workbench software\Scientech 2474 Updated\bin\Debug\Scientech 2474.xml
+C:\Documents and Settings\saksham\Desktop\Workbench software\Scientech 2474 Updated\obj\x86\Debug\Scientech_2474.PumpTimeForm.resources
+E:\ibrahim\Scientech Softwares\Scientech 2474\Scientech 2474 Source Code\Scientech 2474 v1.0 Corrected\bin\Debug\Scientech 2474.exe.config
+E:\ibrahim\Scientech Softwares\Scientech 2474\Scientech 2474 Source Code\Scientech 2474 v1.0 Corrected\obj\x86\Debug\Scientech 2474.exe
+E:\ibrahim\Scientech Softwares\Scientech 2474\Scientech 2474 Source Code\Scientech 2474 v1.0 Corrected\obj\x86\Debug\Scientech 2474.xml
+E:\ibrahim\Scientech Softwares\Scientech 2474\Scientech 2474 Source Code\Scientech 2474 v1.0 Corrected\obj\x86\Debug\Scientech 2474.pdb
+E:\ibrahim\Scientech Softwares\Scientech 2474\Scientech 2474 Source Code\Scientech 2474 v1.0 Corrected_settings\bin\Debug\Scientech 2474.exe.config
+E:\ibrahim\Scientech Softwares\Scientech 2474\Scientech 2474 Source Code\Scientech 2474 v1.0 Corrected_settings\obj\x86\Debug\Scientech 2474.exe
+E:\ibrahim\Scientech Softwares\Scientech 2474\Scientech 2474 Source Code\Scientech 2474 v1.0 Corrected_settings\obj\x86\Debug\Scientech 2474.xml
+E:\ibrahim\Scientech Softwares\Scientech 2474\Scientech 2474 Source Code\Scientech 2474 v1.0 Corrected_settings\obj\x86\Debug\Scientech 2474.pdb
+E:\ibrahim\Scientech Softwares\Scientech 2474\Scientech 2474 Source Code\Scientech 2474 v1.0 Corrected_settings\bin\Debug\Scientech 2474.exe
+E:\ibrahim\Scientech Softwares\Scientech 2474\Scientech 2474 Source Code\Scientech 2474 v1.0 Corrected_settings\bin\Debug\Scientech 2474.pdb
+E:\ibrahim\Scientech Softwares\Scientech 2474\Scientech 2474 Source Code\Scientech 2474 v1.0 Corrected_settings\bin\Debug\Scientech 2474.xml
+E:\ibrahim\Scientech Softwares\Scientech 2474\Scientech 2474 Source Code\Scientech 2474 v1.0 Corrected_settings\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\ibrahim\Scientech Softwares\Scientech 2474\Scientech 2474 Source Code\Scientech 2474 v1.0 Corrected_settings\obj\x86\Debug\Scientech_2474.ControlSettingsForm.resources
+E:\ibrahim\Scientech Softwares\Scientech 2474\Scientech 2474 Source Code\Scientech 2474 v1.0 Corrected_settings\obj\x86\Debug\Scientech_2474.DatabaseConnection.resources
+E:\ibrahim\Scientech Softwares\Scientech 2474\Scientech 2474 Source Code\Scientech 2474 v1.0 Corrected_settings\obj\x86\Debug\Scientech_2474.Delete.resources
+E:\ibrahim\Scientech Softwares\Scientech 2474\Scientech 2474 Source Code\Scientech 2474 v1.0 Corrected_settings\obj\x86\Debug\Scientech_2474.Ethernet.resources
+E:\ibrahim\Scientech Softwares\Scientech 2474\Scientech 2474 Source Code\Scientech 2474 v1.0 Corrected_settings\obj\x86\Debug\Scientech_2474.MainForm.resources
+E:\ibrahim\Scientech Softwares\Scientech 2474\Scientech 2474 Source Code\Scientech 2474 v1.0 Corrected_settings\obj\x86\Debug\Scientech_2474.Resources.resources
+E:\ibrahim\Scientech Softwares\Scientech 2474\Scientech 2474 Source Code\Scientech 2474 v1.0 Corrected_settings\obj\x86\Debug\Scientech_2474.PumpTimeForm.resources
+E:\ibrahim\Scientech Softwares\Scientech 2474\Scientech 2474 Source Code\Scientech 2474 v1.0 Corrected_settings\obj\x86\Debug\Scientech_2474.search.resources
+E:\ibrahim\Scientech Softwares\Scientech 2474\Scientech 2474 Source Code\Scientech 2474 v1.0 Corrected_settings\obj\x86\Debug\Scientech_2474.SetAlarm.resources
+E:\ibrahim\Scientech Softwares\Scientech 2474\Scientech 2474 Source Code\Scientech 2474 v1.0 Corrected_settings\obj\x86\Debug\Scientech_2474.SettingsForm.resources
+E:\ibrahim\Scientech Softwares\Scientech 2474\Scientech 2474 Source Code\Scientech 2474 v1.0 Corrected_settings\obj\x86\Debug\Scientech_2474.StopWatch.resources
+E:\ibrahim\Scientech Softwares\Scientech 2474\Scientech 2474 Source Code\Scientech 2474 v1.0 Corrected_settings\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\ibrahim\Scientech Softwares\Scientech 2474\Scientech 2474 Source Code\Scientech 2474 v1.0 Corrected_settings\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Office Work\Scientech\Scientech 2474\Scientech 2474 v1.0 Corrected_settings\bin\Debug\Scientech 2474.exe.config
+D:\Office Work\Scientech\Scientech 2474\Scientech 2474 v1.0 Corrected_settings\obj\x86\Debug\Scientech 2474.exe
+D:\Office Work\Scientech\Scientech 2474\Scientech 2474 v1.0 Corrected_settings\obj\x86\Debug\Scientech 2474.xml
+D:\Office Work\Scientech\Scientech 2474\Scientech 2474 v1.0 Corrected_settings\obj\x86\Debug\Scientech 2474.pdb
+D:\Office Work\Scientech\Scientech 2474\Scientech 2474 v1.0 Corrected_settings\bin\Debug\Scientech 2474.exe
+D:\Office Work\Scientech\Scientech 2474\Scientech 2474 v1.0 Corrected_settings\bin\Debug\Scientech 2474.pdb
+D:\Office Work\Scientech\Scientech 2474\Scientech 2474 v1.0 Corrected_settings\bin\Debug\Scientech 2474.xml
+D:\Office Work\Scientech\Scientech 2474\Scientech 2474 v1.0 Corrected_settings\obj\x86\Debug\Scientech 2474.vbprojResolveAssemblyReference.cache
+D:\Office Work\Scientech\Scientech 2474\Scientech 2474 v1.0 Corrected_settings\obj\x86\Debug\Scientech_2474.ControlSettingsForm.resources
+D:\Office Work\Scientech\Scientech 2474\Scientech 2474 v1.0 Corrected_settings\obj\x86\Debug\Scientech_2474.DatabaseConnection.resources
+D:\Office Work\Scientech\Scientech 2474\Scientech 2474 v1.0 Corrected_settings\obj\x86\Debug\Scientech_2474.Delete.resources
+D:\Office Work\Scientech\Scientech 2474\Scientech 2474 v1.0 Corrected_settings\obj\x86\Debug\Scientech_2474.Ethernet.resources
+D:\Office Work\Scientech\Scientech 2474\Scientech 2474 v1.0 Corrected_settings\obj\x86\Debug\Scientech_2474.MainForm.resources
+D:\Office Work\Scientech\Scientech 2474\Scientech 2474 v1.0 Corrected_settings\obj\x86\Debug\Scientech_2474.Resources.resources
+D:\Office Work\Scientech\Scientech 2474\Scientech 2474 v1.0 Corrected_settings\obj\x86\Debug\Scientech_2474.PumpTimeForm.resources
+D:\Office Work\Scientech\Scientech 2474\Scientech 2474 v1.0 Corrected_settings\obj\x86\Debug\Scientech_2474.search.resources
+D:\Office Work\Scientech\Scientech 2474\Scientech 2474 v1.0 Corrected_settings\obj\x86\Debug\Scientech_2474.SetAlarm.resources
+D:\Office Work\Scientech\Scientech 2474\Scientech 2474 v1.0 Corrected_settings\obj\x86\Debug\Scientech_2474.SettingsForm.resources
+D:\Office Work\Scientech\Scientech 2474\Scientech 2474 v1.0 Corrected_settings\obj\x86\Debug\Scientech_2474.StopWatch.resources
+D:\Office Work\Scientech\Scientech 2474\Scientech 2474 v1.0 Corrected_settings\obj\x86\Debug\Scientech 2474.vbproj.GenerateResource.Cache
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis 3002C_Scientech\bin\Debug\Scientech 2474.exe.config
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis 3002C_Scientech\obj\x86\Debug\Scientech 2474.exe
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis 3002C_Scientech\obj\x86\Debug\Scientech 2474.xml
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis 3002C_Scientech\obj\x86\Debug\Scientech 2474.pdb

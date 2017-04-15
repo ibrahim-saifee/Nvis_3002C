@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{84B1DF39-266C-4EF2-B2DD-E9EEACAA1D76}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Nvis_3002C.My.MyApplication</StartupObject>
+    <RootNamespace>Nvis_3002C</RootNamespace>
+    <AssemblyName>Nvis 3002C</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Nvis 3002C.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Nvis 3002C.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Nvis Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Arc, Version=1.0.5416.25095, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Arc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Microsoft.VisualBasic.PowerPacks.Vs.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MPCD1, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <ExecutableExtension>.exe</ExecutableExtension>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.4.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Nvis3002APanel, Version=1.0.6311.41835, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Nvis3002APanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Owf.Controls.DigitalDisplayControl, Version=1.0.2974.32861, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Owf.Controls.DigitalDisplayControl.dll</HintPath>
+    </Reference>
+    <Reference Include="SquareTankNoStirrer, Version=1.0.5632.19041, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\SquareTankNoStirrer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ZedGraph, Version=5.1.2.878, Culture=neutral, PublicKeyToken=02a83cbd123fcd60, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\ZedGraph.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ControlSettingsForm.Designer.vb">
+      <DependentUpon>ControlSettingsForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ControlSettingsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatabaseConnection.Designer.vb">
+      <DependentUpon>DatabaseConnection.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseConnection.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delete.Designer.vb">
+      <DependentUpon>Delete.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Delete.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ethernet.Designer.vb">
+      <DependentUpon>Ethernet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ethernet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.vb">
+      <DependentUpon>MainForm.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PumpTimeForm.Designer.vb">
+      <DependentUpon>PumpTimeForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PumpTimeForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search.Designer.vb">
+      <DependentUpon>Search.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Search.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetAlarm.Designer.vb">
+      <DependentUpon>SetAlarm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SetAlarm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingsForm.Designer.vb">
+      <DependentUpon>SettingsForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StopWatch.Designer.vb">
+      <DependentUpon>StopWatch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StopWatch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ControlSettingsForm.resx">
+      <DependentUpon>ControlSettingsForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatabaseConnection.resx">
+      <DependentUpon>DatabaseConnection.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delete.resx">
+      <DependentUpon>Delete.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ethernet.resx">
+      <DependentUpon>Ethernet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PumpTimeForm.resx">
+      <DependentUpon>PumpTimeForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search.resx">
+      <DependentUpon>Search.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetAlarm.resx">
+      <DependentUpon>SetAlarm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsForm.resx">
+      <DependentUpon>SettingsForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StopWatch.resx">
+      <DependentUpon>StopWatch.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BlockDiagram.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Buttons red on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Buttons red off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Buttons yellow on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Buttons yellow off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Buttons green on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Buttons green off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red led on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red led off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green led off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red led.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green led on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow led off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow led on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue led off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VisualIndicatorSymbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SolenoidalSymbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PumpSymbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HeaterSymbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StirrerSymbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BuzzerSymbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ethernet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emergency_Button_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emergency_Button_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stopwatch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\graph.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log_close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log_start.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orange led on.png" />
+    <None Include="Resources\orange led off.png" />
+    <Content Include="Nvis Icon.ico" />
+    <Content Include="STPL.ico" />
+    <None Include="Resources\config.png" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\blue led on.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

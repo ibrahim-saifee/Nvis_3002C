@@ -1,0 +1,39 @@
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis 3002C_Scientech\bin\Debug\Nvis 3002C.exe.config
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis 3002C_Scientech\bin\Debug\Nvis 3002C.exe
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis 3002C_Scientech\bin\Debug\Nvis 3002C.pdb
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis 3002C_Scientech\bin\Debug\Nvis 3002C.xml
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis 3002C_Scientech\obj\x86\Debug\Nvis_3002C.ControlSettingsForm.resources
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis 3002C_Scientech\obj\x86\Debug\Nvis_3002C.DatabaseConnection.resources
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis 3002C_Scientech\obj\x86\Debug\Nvis_3002C.Delete.resources
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis 3002C_Scientech\obj\x86\Debug\Nvis_3002C.Ethernet.resources
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis 3002C_Scientech\obj\x86\Debug\Nvis_3002C.MainForm.resources
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis 3002C_Scientech\obj\x86\Debug\Nvis_3002C.Resources.resources
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis 3002C_Scientech\obj\x86\Debug\Nvis_3002C.PumpTimeForm.resources
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis 3002C_Scientech\obj\x86\Debug\Nvis_3002C.search.resources
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis 3002C_Scientech\obj\x86\Debug\Nvis_3002C.SetAlarm.resources
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis 3002C_Scientech\obj\x86\Debug\Nvis_3002C.SettingsForm.resources
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis 3002C_Scientech\obj\x86\Debug\Nvis_3002C.StopWatch.resources
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis 3002C_Scientech\obj\x86\Debug\Nvis 3002C.vbproj.GenerateResource.Cache
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis 3002C_Scientech\obj\x86\Debug\Nvis 3002C.exe
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis 3002C_Scientech\obj\x86\Debug\Nvis 3002C.xml
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis 3002C_Scientech\obj\x86\Debug\Nvis 3002C.pdb
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis_3002C\SoftwareCode\Nvis 3002C_Scientech\bin\Debug\Nvis 3002C.exe.config
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis_3002C\SoftwareCode\Nvis 3002C_Scientech\obj\x86\Debug\Nvis 3002C.exe
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis_3002C\SoftwareCode\Nvis 3002C_Scientech\obj\x86\Debug\Nvis 3002C.xml
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis_3002C\SoftwareCode\Nvis 3002C_Scientech\obj\x86\Debug\Nvis 3002C.pdb
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis_3002C\SoftwareCode\Nvis 3002C_Scientech\obj\x86\Debug\Nvis 3002C.vbprojResolveAssemblyReference.cache
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis_3002C\SoftwareCode\Nvis 3002C_Scientech\obj\x86\Debug\Nvis_3002C.ControlSettingsForm.resources
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis_3002C\SoftwareCode\Nvis 3002C_Scientech\obj\x86\Debug\Nvis_3002C.DatabaseConnection.resources
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis_3002C\SoftwareCode\Nvis 3002C_Scientech\obj\x86\Debug\Nvis_3002C.Delete.resources
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis_3002C\SoftwareCode\Nvis 3002C_Scientech\obj\x86\Debug\Nvis_3002C.Ethernet.resources
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis_3002C\SoftwareCode\Nvis 3002C_Scientech\obj\x86\Debug\Nvis_3002C.MainForm.resources
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis_3002C\SoftwareCode\Nvis 3002C_Scientech\obj\x86\Debug\Nvis_3002C.Resources.resources
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis_3002C\SoftwareCode\Nvis 3002C_Scientech\obj\x86\Debug\Nvis_3002C.PumpTimeForm.resources
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis_3002C\SoftwareCode\Nvis 3002C_Scientech\obj\x86\Debug\Nvis_3002C.search.resources
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis_3002C\SoftwareCode\Nvis 3002C_Scientech\obj\x86\Debug\Nvis_3002C.SetAlarm.resources
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis_3002C\SoftwareCode\Nvis 3002C_Scientech\obj\x86\Debug\Nvis_3002C.SettingsForm.resources
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis_3002C\SoftwareCode\Nvis 3002C_Scientech\obj\x86\Debug\Nvis_3002C.StopWatch.resources
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis_3002C\SoftwareCode\Nvis 3002C_Scientech\obj\x86\Debug\Nvis 3002C.vbproj.GenerateResource.Cache
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis_3002C\SoftwareCode\Nvis 3002C_Scientech\bin\Debug\Nvis 3002C.exe
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis_3002C\SoftwareCode\Nvis 3002C_Scientech\bin\Debug\Nvis 3002C.pdb
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis_3002C\SoftwareCode\Nvis 3002C_Scientech\bin\Debug\Nvis 3002C.xml

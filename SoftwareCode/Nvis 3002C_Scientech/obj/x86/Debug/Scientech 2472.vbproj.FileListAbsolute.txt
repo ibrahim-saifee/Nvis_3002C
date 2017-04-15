@@ -1,0 +1,161 @@
+E:\Ibrahim\VB.NET\New Instrumentation Bench\bin\Debug\Scientech 2472.exe.config
+E:\Ibrahim\VB.NET\New Instrumentation Bench\obj\x86\Debug\Scientech 2472.exe
+E:\Ibrahim\VB.NET\New Instrumentation Bench\obj\x86\Debug\Scientech 2472.xml
+E:\Ibrahim\VB.NET\New Instrumentation Bench\obj\x86\Debug\Scientech 2472.pdb
+E:\Ibrahim\VB.NET\New Instrumentation Bench\bin\Debug\Scientech 2472.exe
+E:\Ibrahim\VB.NET\New Instrumentation Bench\bin\Debug\Scientech 2472.pdb
+E:\Ibrahim\VB.NET\New Instrumentation Bench\bin\Debug\Scientech 2472.xml
+E:\Ibrahim\VB.NET\New Instrumentation Bench\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Ibrahim\VB.NET\New Instrumentation Bench\obj\x86\Debug\Scientech_2472.DatabaseConnection.resources
+E:\Ibrahim\VB.NET\New Instrumentation Bench\obj\x86\Debug\Scientech_2472.Delete.resources
+E:\Ibrahim\VB.NET\New Instrumentation Bench\obj\x86\Debug\Scientech_2472.Ethernet.resources
+E:\Ibrahim\VB.NET\New Instrumentation Bench\obj\x86\Debug\Scientech_2472.MainForm.resources
+E:\Ibrahim\VB.NET\New Instrumentation Bench\obj\x86\Debug\Scientech_2472.Resources.resources
+E:\Ibrahim\VB.NET\New Instrumentation Bench\obj\x86\Debug\Scientech_2472.search.resources
+E:\Ibrahim\VB.NET\New Instrumentation Bench\obj\x86\Debug\Scientech_2472.SetAlarm.resources
+E:\Ibrahim\VB.NET\New Instrumentation Bench\obj\x86\Debug\Scientech_2472.StopWatch.resources
+E:\Ibrahim\VB.NET\New Instrumentation Bench\obj\x86\Debug\Scientech_2472.TTSettings.resources
+E:\Ibrahim\VB.NET\New Instrumentation Bench\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\Ibrahim\VB.NET\New Instrumentation Bench\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph\bin\Debug\Scientech 2472.exe.config
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph\obj\x86\Debug\Scientech 2472.exe
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph\obj\x86\Debug\Scientech 2472.xml
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph\obj\x86\Debug\Scientech 2472.pdb
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph\bin\Debug\Scientech 2472.exe
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph\bin\Debug\Scientech 2472.pdb
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph\bin\Debug\Scientech 2472.xml
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph\obj\x86\Debug\Scientech_2472.DatabaseConnection.resources
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph\obj\x86\Debug\Scientech_2472.Delete.resources
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph\obj\x86\Debug\Scientech_2472.Ethernet.resources
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph\obj\x86\Debug\Scientech_2472.MainForm.resources
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph\obj\x86\Debug\Scientech_2472.Resources.resources
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph\obj\x86\Debug\Scientech_2472.search.resources
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph\obj\x86\Debug\Scientech_2472.SetAlarm.resources
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph\obj\x86\Debug\Scientech_2472.StopWatch.resources
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph\obj\x86\Debug\Scientech_2472.TTSettings.resources
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\saksham\Desktop\Scientech 2472 v1.0 SameGraph\bin\Debug\Scientech 2472.exe.config
+C:\Documents and Settings\saksham\Desktop\Scientech 2472 v1.0 SameGraph\obj\x86\Debug\Scientech 2472.exe
+C:\Documents and Settings\saksham\Desktop\Scientech 2472 v1.0 SameGraph\obj\x86\Debug\Scientech 2472.xml
+C:\Documents and Settings\saksham\Desktop\Scientech 2472 v1.0 SameGraph\obj\x86\Debug\Scientech 2472.pdb
+C:\Documents and Settings\saksham\Desktop\Scientech 2472 v1.0 SameGraph\bin\Debug\Scientech 2472.exe
+C:\Documents and Settings\saksham\Desktop\Scientech 2472 v1.0 SameGraph\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\saksham\Desktop\Scientech 2472 v1.0 SameGraph\obj\x86\Debug\Scientech_2472.DatabaseConnection.resources
+C:\Documents and Settings\saksham\Desktop\Scientech 2472 v1.0 SameGraph\obj\x86\Debug\Scientech_2472.Delete.resources
+C:\Documents and Settings\saksham\Desktop\Scientech 2472 v1.0 SameGraph\obj\x86\Debug\Scientech_2472.Ethernet.resources
+C:\Documents and Settings\saksham\Desktop\Scientech 2472 v1.0 SameGraph\obj\x86\Debug\Scientech_2472.MainForm.resources
+C:\Documents and Settings\saksham\Desktop\Scientech 2472 v1.0 SameGraph\obj\x86\Debug\Scientech_2472.Resources.resources
+C:\Documents and Settings\saksham\Desktop\Scientech 2472 v1.0 SameGraph\obj\x86\Debug\Scientech_2472.search.resources
+C:\Documents and Settings\saksham\Desktop\Scientech 2472 v1.0 SameGraph\obj\x86\Debug\Scientech_2472.SetAlarm.resources
+C:\Documents and Settings\saksham\Desktop\Scientech 2472 v1.0 SameGraph\obj\x86\Debug\Scientech_2472.StopWatch.resources
+C:\Documents and Settings\saksham\Desktop\Scientech 2472 v1.0 SameGraph\obj\x86\Debug\Scientech_2472.TTSettings.resources
+C:\Documents and Settings\saksham\Desktop\Scientech 2472 v1.0 SameGraph\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\saksham\Desktop\Scientech 2472 v1.0 SameGraph\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\saksham\Desktop\Scientech 2472 v1.0 SameGraph\bin\Debug\Scientech 2472.pdb
+C:\Documents and Settings\saksham\Desktop\Scientech 2472 v1.0 SameGraph\bin\Debug\Scientech 2472.xml
+E:\Ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Fan\bin\Debug\Scientech 2472.exe.config
+E:\Ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Fan\obj\x86\Debug\Scientech 2472.exe
+E:\Ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Fan\obj\x86\Debug\Scientech 2472.xml
+E:\Ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Fan\obj\x86\Debug\Scientech 2472.pdb
+E:\Ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Fan\bin\Debug\Scientech 2472.exe
+E:\Ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Fan\bin\Debug\Scientech 2472.pdb
+E:\Ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Fan\bin\Debug\Scientech 2472.xml
+E:\Ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Fan\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Fan\obj\x86\Debug\Scientech_2472.DatabaseConnection.resources
+E:\Ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Fan\obj\x86\Debug\Scientech_2472.Delete.resources
+E:\Ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Fan\obj\x86\Debug\Scientech_2472.Ethernet.resources
+E:\Ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Fan\obj\x86\Debug\Scientech_2472.MainForm.resources
+E:\Ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Fan\obj\x86\Debug\Scientech_2472.Resources.resources
+E:\Ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Fan\obj\x86\Debug\Scientech_2472.search.resources
+E:\Ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Fan\obj\x86\Debug\Scientech_2472.SetAlarm.resources
+E:\Ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Fan\obj\x86\Debug\Scientech_2472.StopWatch.resources
+E:\Ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Fan\obj\x86\Debug\Scientech_2472.TTSettings.resources
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Fan\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Fan\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\Ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Fan\obj\x86\Debug\Scientech_2472.SettingsForm.resources
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Settings\bin\Debug\Scientech 2472.exe.config
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Settings\obj\x86\Debug\Scientech 2472.exe
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Settings\obj\x86\Debug\Scientech 2472.xml
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Settings\obj\x86\Debug\Scientech 2472.pdb
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Settings\bin\Debug\Scientech 2472.exe
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Settings\bin\Debug\Scientech 2472.pdb
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Settings\bin\Debug\Scientech 2472.xml
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Settings\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Settings\obj\x86\Debug\Scientech_2472.DatabaseConnection.resources
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Settings\obj\x86\Debug\Scientech_2472.Delete.resources
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Settings\obj\x86\Debug\Scientech_2472.Ethernet.resources
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Settings\obj\x86\Debug\Scientech_2472.MainForm.resources
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Settings\obj\x86\Debug\Scientech_2472.Resources.resources
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Settings\obj\x86\Debug\Scientech_2472.search.resources
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Settings\obj\x86\Debug\Scientech_2472.SetAlarm.resources
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Settings\obj\x86\Debug\Scientech_2472.SettingsForm.resources
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Settings\obj\x86\Debug\Scientech_2472.StopWatch.resources
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Settings\obj\x86\Debug\Scientech_2472.TTSettings.resources
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Settings\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Settings\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Settings\obj\x86\Debug\Scientech_2472.ControlSettingsForm.resources
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Settings_PID\bin\Debug\Scientech 2472.exe.config
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Settings_PID\obj\x86\Debug\Scientech 2472.exe
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Settings_PID\obj\x86\Debug\Scientech 2472.xml
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Settings_PID\obj\x86\Debug\Scientech 2472.pdb
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Settings_PID\bin\Debug\Scientech 2472.exe
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Settings_PID\bin\Debug\Scientech 2472.pdb
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Settings_PID\bin\Debug\Scientech 2472.xml
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Settings_PID\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Settings_PID\obj\x86\Debug\Scientech_2472.ControlSettingsForm.resources
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Settings_PID\obj\x86\Debug\Scientech_2472.DatabaseConnection.resources
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Settings_PID\obj\x86\Debug\Scientech_2472.Delete.resources
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Settings_PID\obj\x86\Debug\Scientech_2472.Ethernet.resources
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Settings_PID\obj\x86\Debug\Scientech_2472.MainForm.resources
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Settings_PID\obj\x86\Debug\Scientech_2472.Resources.resources
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Settings_PID\obj\x86\Debug\Scientech_2472.search.resources
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Settings_PID\obj\x86\Debug\Scientech_2472.SetAlarm.resources
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Settings_PID\obj\x86\Debug\Scientech_2472.SettingsForm.resources
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Settings_PID\obj\x86\Debug\Scientech_2472.StopWatch.resources
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Settings_PID\obj\x86\Debug\Scientech_2472.TTSettings.resources
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Settings_PID\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\ibrahim\VB.NET\Scientech 2472\Scientech 2472 v1.0 SameGraph_Settings_PID\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\saksham\Desktop\Scientech 2472 v1.0 SameGraph_Settings_PID\bin\Debug\Scientech 2472.exe.config
+C:\Documents and Settings\saksham\Desktop\Scientech 2472 v1.0 SameGraph_Settings_PID\obj\x86\Debug\Scientech 2472.exe
+C:\Documents and Settings\saksham\Desktop\Scientech 2472 v1.0 SameGraph_Settings_PID\obj\x86\Debug\Scientech 2472.xml
+C:\Documents and Settings\saksham\Desktop\Scientech 2472 v1.0 SameGraph_Settings_PID\obj\x86\Debug\Scientech 2472.pdb
+C:\Documents and Settings\saksham\Desktop\Scientech 2472 v1.0 SameGraph_Settings_PID\bin\Debug\Scientech 2472.exe
+C:\Documents and Settings\saksham\Desktop\Scientech 2472 v1.0 SameGraph_Settings_PID\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\saksham\Desktop\Scientech 2472 v1.0 SameGraph_Settings_PID\obj\x86\Debug\Scientech_2472.ControlSettingsForm.resources
+C:\Documents and Settings\saksham\Desktop\Scientech 2472 v1.0 SameGraph_Settings_PID\obj\x86\Debug\Scientech_2472.DatabaseConnection.resources
+C:\Documents and Settings\saksham\Desktop\Scientech 2472 v1.0 SameGraph_Settings_PID\obj\x86\Debug\Scientech_2472.Delete.resources
+C:\Documents and Settings\saksham\Desktop\Scientech 2472 v1.0 SameGraph_Settings_PID\obj\x86\Debug\Scientech_2472.Ethernet.resources
+C:\Documents and Settings\saksham\Desktop\Scientech 2472 v1.0 SameGraph_Settings_PID\obj\x86\Debug\Scientech_2472.MainForm.resources
+C:\Documents and Settings\saksham\Desktop\Scientech 2472 v1.0 SameGraph_Settings_PID\obj\x86\Debug\Scientech_2472.Resources.resources
+C:\Documents and Settings\saksham\Desktop\Scientech 2472 v1.0 SameGraph_Settings_PID\obj\x86\Debug\Scientech_2472.search.resources
+C:\Documents and Settings\saksham\Desktop\Scientech 2472 v1.0 SameGraph_Settings_PID\obj\x86\Debug\Scientech_2472.SetAlarm.resources
+C:\Documents and Settings\saksham\Desktop\Scientech 2472 v1.0 SameGraph_Settings_PID\obj\x86\Debug\Scientech_2472.SettingsForm.resources
+C:\Documents and Settings\saksham\Desktop\Scientech 2472 v1.0 SameGraph_Settings_PID\obj\x86\Debug\Scientech_2472.StopWatch.resources
+C:\Documents and Settings\saksham\Desktop\Scientech 2472 v1.0 SameGraph_Settings_PID\obj\x86\Debug\Scientech_2472.TTSettings.resources
+C:\Documents and Settings\saksham\Desktop\Scientech 2472 v1.0 SameGraph_Settings_PID\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\saksham\Desktop\Scientech 2472 v1.0 SameGraph_Settings_PID\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\saksham\Desktop\Scientech 2472 v1.0 SameGraph_Settings_PID\bin\Debug\Scientech 2472.pdb
+C:\Documents and Settings\saksham\Desktop\Scientech 2472 v1.0 SameGraph_Settings_PID\bin\Debug\Scientech 2472.xml
+E:\ibrahim\VB.NET\Scientech 2476\Scientech 2472 v1.0\bin\Debug\Scientech 2472.exe.config
+E:\ibrahim\VB.NET\Scientech 2476\Scientech 2472 v1.0\obj\x86\Debug\Scientech 2472.exe
+E:\ibrahim\VB.NET\Scientech 2476\Scientech 2472 v1.0\obj\x86\Debug\Scientech 2472.xml
+E:\ibrahim\VB.NET\Scientech 2476\Scientech 2472 v1.0\obj\x86\Debug\Scientech 2472.pdb
+E:\ibrahim\VB.NET\Scientech 2476\Scientech 2472 v1.0\bin\Debug\Scientech 2472.exe
+E:\ibrahim\VB.NET\Scientech 2476\Scientech 2472 v1.0\bin\Debug\Scientech 2472.pdb
+E:\ibrahim\VB.NET\Scientech 2476\Scientech 2472 v1.0\bin\Debug\Scientech 2472.xml
+E:\ibrahim\VB.NET\Scientech 2476\Scientech 2472 v1.0\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\ibrahim\VB.NET\Scientech 2476\Scientech 2472 v1.0\obj\x86\Debug\Scientech_2472.ControlSettingsForm.resources
+E:\ibrahim\VB.NET\Scientech 2476\Scientech 2472 v1.0\obj\x86\Debug\Scientech_2472.DatabaseConnection.resources
+E:\ibrahim\VB.NET\Scientech 2476\Scientech 2472 v1.0\obj\x86\Debug\Scientech_2472.Delete.resources
+E:\ibrahim\VB.NET\Scientech 2476\Scientech 2472 v1.0\obj\x86\Debug\Scientech_2472.Ethernet.resources
+E:\ibrahim\VB.NET\Scientech 2476\Scientech 2472 v1.0\obj\x86\Debug\Scientech_2472.MainForm.resources
+E:\ibrahim\VB.NET\Scientech 2476\Scientech 2472 v1.0\obj\x86\Debug\Scientech_2472.Resources.resources
+E:\ibrahim\VB.NET\Scientech 2476\Scientech 2472 v1.0\obj\x86\Debug\Scientech_2472.search.resources
+E:\ibrahim\VB.NET\Scientech 2476\Scientech 2472 v1.0\obj\x86\Debug\Scientech_2472.SetAlarm.resources
+E:\ibrahim\VB.NET\Scientech 2476\Scientech 2472 v1.0\obj\x86\Debug\Scientech_2472.SettingsForm.resources
+E:\ibrahim\VB.NET\Scientech 2476\Scientech 2472 v1.0\obj\x86\Debug\Scientech_2472.StopWatch.resources
+E:\ibrahim\VB.NET\Scientech 2476\Scientech 2472 v1.0\obj\x86\Debug\Scientech_2472.TTSettings.resources
+E:\ibrahim\VB.NET\Scientech 2476\Scientech 2472 v1.0\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\ibrahim\VB.NET\Scientech 2476\Scientech 2472 v1.0\obj\x86\Debug\GenerateResource.write.1.tlog
