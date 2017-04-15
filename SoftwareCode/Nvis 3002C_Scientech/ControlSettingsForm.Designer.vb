@@ -189,9 +189,9 @@ Partial Class ControlSettingsForm
         '
         'TdTrackBar
         '
-        Me.TdTrackBar._CouleurA = System.Drawing.Color.Yellow
+        Me.TdTrackBar._CouleurA = System.Drawing.Color.Teal
         Me.TdTrackBar._CouleurCurseur = System.Drawing.Color.WhiteSmoke
-        Me.TdTrackBar._CouleurDe = System.Drawing.Color.Gold
+        Me.TdTrackBar._CouleurDe = System.Drawing.Color.Teal
         Me.TdTrackBar._Curseur = MPCD.TrackBar.TypeCurseur.Losange
         Me.TdTrackBar._Epaisseur = 15
         Me.TdTrackBar._Maximum = 120
@@ -210,9 +210,9 @@ Partial Class ControlSettingsForm
         '
         'TiTrackBar
         '
-        Me.TiTrackBar._CouleurA = System.Drawing.Color.Yellow
+        Me.TiTrackBar._CouleurA = System.Drawing.Color.Teal
         Me.TiTrackBar._CouleurCurseur = System.Drawing.Color.WhiteSmoke
-        Me.TiTrackBar._CouleurDe = System.Drawing.Color.Gold
+        Me.TiTrackBar._CouleurDe = System.Drawing.Color.Teal
         Me.TiTrackBar._Curseur = MPCD.TrackBar.TypeCurseur.Losange
         Me.TiTrackBar._Epaisseur = 15
         Me.TiTrackBar._Maximum = 120
@@ -231,9 +231,9 @@ Partial Class ControlSettingsForm
         '
         'KpTrackBar
         '
-        Me.KpTrackBar._CouleurA = System.Drawing.Color.Yellow
+        Me.KpTrackBar._CouleurA = System.Drawing.Color.Teal
         Me.KpTrackBar._CouleurCurseur = System.Drawing.Color.WhiteSmoke
-        Me.KpTrackBar._CouleurDe = System.Drawing.Color.Gold
+        Me.KpTrackBar._CouleurDe = System.Drawing.Color.Teal
         Me.KpTrackBar._Curseur = MPCD.TrackBar.TypeCurseur.Losange
         Me.KpTrackBar._Epaisseur = 15
         Me.KpTrackBar._Maximum = 100
@@ -254,7 +254,7 @@ Partial Class ControlSettingsForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(203, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(182, Byte), Integer), CType(CType(216, Byte), Integer), CType(CType(205, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(289, 246)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow

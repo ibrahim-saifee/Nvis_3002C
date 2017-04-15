@@ -81,7 +81,7 @@ Partial Class Ethernet
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(203, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(182, Byte), Integer), CType(CType(216, Byte), Integer), CType(CType(205, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(261, 121)
         Me.Controls.Add(Me.CnclButton)
         Me.Controls.Add(Me.OKButton)

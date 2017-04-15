@@ -122,7 +122,7 @@ Partial Class DatabaseConnection
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(203, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(182, Byte), Integer), CType(CType(216, Byte), Integer), CType(CType(205, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(275, 259)
         Me.Controls.Add(Me.ignorebtn)
         Me.Controls.Add(Me.connbtn)
@@ -137,7 +137,7 @@ Partial Class DatabaseConnection
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "DatabaseConnection"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "DatabaseConnection"
+        Me.Text = "Database Connection"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

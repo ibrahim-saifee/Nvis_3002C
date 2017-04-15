@@ -28,9 +28,9 @@ Partial Class SetAlarm
         Me.FlowTextBox = New System.Windows.Forms.MaskedTextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.FlowAlarmTable = New System.Windows.Forms.DataGridView()
+        Me.FlowColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.RemoveButton = New System.Windows.Forms.Button()
         Me.AddButton = New System.Windows.Forms.Button()
-        Me.FlowColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel2.SuspendLayout()
         CType(Me.FlowAlarmTable, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -93,6 +93,11 @@ Partial Class SetAlarm
         Me.FlowAlarmTable.Size = New System.Drawing.Size(146, 197)
         Me.FlowAlarmTable.TabIndex = 7
         '
+        'FlowColumn
+        '
+        Me.FlowColumn.HeaderText = "Flow"
+        Me.FlowColumn.Name = "FlowColumn"
+        '
         'RemoveButton
         '
         Me.RemoveButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -113,16 +118,11 @@ Partial Class SetAlarm
         Me.AddButton.Text = "Add"
         Me.AddButton.UseVisualStyleBackColor = True
         '
-        'FlowColumn
-        '
-        Me.FlowColumn.HeaderText = "Flow"
-        Me.FlowColumn.Name = "FlowColumn"
-        '
         'SetAlarm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(203, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(182, Byte), Integer), CType(CType(216, Byte), Integer), CType(CType(205, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(282, 258)
         Me.Controls.Add(Me.Panel2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow

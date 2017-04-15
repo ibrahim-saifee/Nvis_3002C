@@ -207,7 +207,7 @@ Public Class MainForm
     Private Sub AllOFF()
         Switch_Compressor(False)
         Switch_Pump(False)
-        Open_ControlValve(100)
+        Open_ControlValve(0)
         Switch_VisualIndicator(False)
         IsStartPressed = False
         DataScanTimer.Enabled = False
@@ -259,7 +259,7 @@ Public Class MainForm
 
             '------------------------ Check if process is open loop or close loop (auto/manual) -----------------------------------------'
             If IsAutoSelected = True Then
-                Pressure_P_PI_PID_Operation()
+                Flow_P_PI_PID_Operation()
                 '--------------------- Check if process is ON/OFF or P PI PID -----------------------------------------'
                 'If ControlSettingsForm.onoffradio.Checked = True Then
                 '    'If FlowValue < FlowSPUpDown.Value - Hysterisis Then
@@ -275,8 +275,8 @@ Public Class MainForm
                 '    '    Open_ControlValve(0)
                 '    'End If
                 'Else
-                '    '------------------- P PI PID Prcoess -------------------------------'
-                '    Pressure_P_PI_PID_Operation()
+                '------------------- P PI PID Prcoess -------------------------------'
+                '   Flow_P_PI_PID_Operation()
                 'End If
             End If
 
@@ -287,7 +287,7 @@ Public Class MainForm
 
 
     Dim PTerm, ITerm, DTerm, PreviousError As Double
-    Private Sub Pressure_P_PI_PID_Operation()
+    Private Sub Flow_P_PI_PID_Operation()
         Dim ProcessError As Integer = FlowSPUpDown.Value - FlowValue
 
         '------------------ Check for P PI PID Process -----------------------------------------'
@@ -312,8 +312,14 @@ Public Class MainForm
         If ITerm > 5 Then ITerm = 5
 
         Dim CalculatedValveOpening As Integer = (PTerm + ITerm + DTerm)
-        CalculatedValveOpening = 50 + CalculatedValveOpening
-        If CalculatedValveOpening < 25 Then CalculatedValveOpening = 25
+
+        ' Mean point of opening of control valve is 50%
+        ' So CalculatedValveOpening is subtracted (or added) to remove error
+        ' Its like distracting opening negative to error to achieve zero error.
+        ' Subtracting CalculatedValveOpening from 50% because with increase in valve opening will decrease in flow value
+        ' If valve opening will increase flow then CalculatedValveOpening will be added to 50%.
+        CalculatedValveOpening = 50 - CalculatedValveOpening
+        If CalculatedValveOpening < 0 Then CalculatedValveOpening = 0
         If CalculatedValveOpening > 100 Then CalculatedValveOpening = 100
         PreviousError = ProcessError
 

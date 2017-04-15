@@ -22,6 +22,7 @@ Partial Class search
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(search))
         Me.Label3 = New System.Windows.Forms.Label()
         Me.resolutionbox = New System.Windows.Forms.ComboBox()
@@ -43,11 +44,11 @@ Partial Class search
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.FlowTable = New System.Windows.Forms.DataGridView()
-        Me.FlowGraph = New ZedGraph.ZedGraphControl()
         Me.dt = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.tm = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.sp = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.flow = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FlowGraph = New ZedGraph.ZedGraphControl()
         Me.WaitPanel.SuspendLayout()
         CType(Me.FlowTable, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -228,7 +229,7 @@ Partial Class search
         '
         'FlowTable
         '
-        Me.FlowTable.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(203, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.FlowTable.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(182, Byte), Integer), CType(CType(216, Byte), Integer), CType(CType(205, Byte), Integer))
         Me.FlowTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.FlowTable.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.dt, Me.tm, Me.sp, Me.flow})
         Me.FlowTable.Location = New System.Drawing.Point(2, 2)
@@ -236,22 +237,6 @@ Partial Class search
         Me.FlowTable.Size = New System.Drawing.Size(616, 459)
         Me.FlowTable.TabIndex = 92
         Me.FlowTable.Visible = False
-        '
-        'FlowGraph
-        '
-        Me.FlowGraph.IsAntiAlias = True
-        Me.FlowGraph.IsZoomOnMouseCenter = True
-        Me.FlowGraph.Location = New System.Drawing.Point(2, 2)
-        Me.FlowGraph.Name = "FlowGraph"
-        Me.FlowGraph.ScrollGrace = 0.0R
-        Me.FlowGraph.ScrollMaxX = 0.0R
-        Me.FlowGraph.ScrollMaxY = 0.0R
-        Me.FlowGraph.ScrollMaxY2 = 0.0R
-        Me.FlowGraph.ScrollMinX = 0.0R
-        Me.FlowGraph.ScrollMinY = 0.0R
-        Me.FlowGraph.ScrollMinY2 = 0.0R
-        Me.FlowGraph.Size = New System.Drawing.Size(616, 459)
-        Me.FlowGraph.TabIndex = 91
         '
         'dt
         '
@@ -277,11 +262,27 @@ Partial Class search
         Me.flow.Name = "flow"
         Me.flow.Width = 140
         '
+        'FlowGraph
+        '
+        Me.FlowGraph.IsAntiAlias = True
+        Me.FlowGraph.IsZoomOnMouseCenter = True
+        Me.FlowGraph.Location = New System.Drawing.Point(2, 2)
+        Me.FlowGraph.Name = "FlowGraph"
+        Me.FlowGraph.ScrollGrace = 0.0R
+        Me.FlowGraph.ScrollMaxX = 0.0R
+        Me.FlowGraph.ScrollMaxY = 0.0R
+        Me.FlowGraph.ScrollMaxY2 = 0.0R
+        Me.FlowGraph.ScrollMinX = 0.0R
+        Me.FlowGraph.ScrollMinY = 0.0R
+        Me.FlowGraph.ScrollMinY2 = 0.0R
+        Me.FlowGraph.Size = New System.Drawing.Size(616, 459)
+        Me.FlowGraph.TabIndex = 91
+        '
         'search
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(203, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(182, Byte), Integer), CType(CType(216, Byte), Integer), CType(CType(205, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(620, 566)
         Me.Controls.Add(Me.WaitPanel)
         Me.Controls.Add(Me.FlowTable)

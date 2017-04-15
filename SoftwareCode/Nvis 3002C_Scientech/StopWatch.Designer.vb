@@ -84,7 +84,7 @@ Partial Class StopWatch
         '
         'laptimetable
         '
-        Me.laptimetable.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(203, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.laptimetable.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(182, Byte), Integer), CType(CType(216, Byte), Integer), CType(CType(205, Byte), Integer))
         Me.laptimetable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.laptimetable.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.laptime})
         Me.laptimetable.Location = New System.Drawing.Point(211, 127)
@@ -237,7 +237,7 @@ Partial Class StopWatch
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(203, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(182, Byte), Integer), CType(CType(216, Byte), Integer), CType(CType(205, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(392, 288)
         Me.Controls.Add(Me.capturebtn)
         Me.Controls.Add(Me.rstbtn)

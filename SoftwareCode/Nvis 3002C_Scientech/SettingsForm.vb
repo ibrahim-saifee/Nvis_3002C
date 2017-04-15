@@ -88,6 +88,10 @@
     End Sub
 
     Private Sub SettingsForm_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        If MainForm.IsLinkFound = False Then
+            MessageBox.Show(Me, "No link found, check if your hardware is connected to LAN", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Exit Sub
+        End If
         If MainForm.StartToolStripMenuItem2.Text = "S&tart" Then
             Try
                 Ethernet.Connect()
