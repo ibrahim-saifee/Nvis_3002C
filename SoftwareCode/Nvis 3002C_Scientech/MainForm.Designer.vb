@@ -81,7 +81,7 @@ Partial Class MainForm
         Me.StopButton = New System.Windows.Forms.PictureBox()
         Me.DAQTemperatureLabel = New System.Windows.Forms.Label()
         Me.FlowGraph = New ZedGraph.ZedGraphControl()
-        Me.GraphClearButton = New System.Windows.Forms.Button()
+        Me.FlowGraphClearButton = New System.Windows.Forms.Button()
         Me.SwitchPanel = New System.Windows.Forms.Panel()
         Me.ManualImage = New System.Windows.Forms.PictureBox()
         Me.AutoImage = New System.Windows.Forms.PictureBox()
@@ -89,7 +89,10 @@ Partial Class MainForm
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.LiveTab = New System.Windows.Forms.TabPage()
         Me.WaterFlowSystem1 = New Nvis3002APanel.Nvis3002APanel()
-        Me.PlotTab = New System.Windows.Forms.TabPage()
+        Me.FlowTab = New System.Windows.Forms.TabPage()
+        Me.LevelTab = New System.Windows.Forms.TabPage()
+        Me.LevelGraphClearButton = New System.Windows.Forms.Button()
+        Me.LevelGraph = New ZedGraph.ZedGraphControl()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
@@ -107,6 +110,17 @@ Partial Class MainForm
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.SolValButton = New System.Windows.Forms.PictureBox()
         Me.SolValLed = New System.Windows.Forms.PictureBox()
+        Me.FlowContainerPanel = New System.Windows.Forms.Panel()
+        Me.LevelContainerPanel = New System.Windows.Forms.Panel()
+        Me.Panel10 = New System.Windows.Forms.Panel()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.LevelSPDigi = New Owf.Controls.DigitalDisplayControl()
+        Me.LevelSPUpDown = New System.Windows.Forms.NumericUpDown()
+        Me.Panel11 = New System.Windows.Forms.Panel()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.LevelCurrentLabel = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.LevelDigi = New Owf.Controls.DigitalDisplayControl()
         Me.MenuStrip.SuspendLayout()
         CType(Me.LinkLedPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.FlowPanel.SuspendLayout()
@@ -126,7 +140,8 @@ Partial Class MainForm
         CType(Me.AutoImage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.LiveTab.SuspendLayout()
-        Me.PlotTab.SuspendLayout()
+        Me.FlowTab.SuspendLayout()
+        Me.LevelTab.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel5.SuspendLayout()
@@ -136,6 +151,11 @@ Partial Class MainForm
         Me.Panel8.SuspendLayout()
         CType(Me.SolValButton, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SolValLed, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.FlowContainerPanel.SuspendLayout()
+        Me.LevelContainerPanel.SuspendLayout()
+        Me.Panel10.SuspendLayout()
+        CType(Me.LevelSPUpDown, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel11.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label12
@@ -359,9 +379,9 @@ Partial Class MainForm
         Me.FlowPanel.Controls.Add(Me.FlowCurrentLabel)
         Me.FlowPanel.Controls.Add(Me.Label18)
         Me.FlowPanel.Controls.Add(Me.FlowDigi)
-        Me.FlowPanel.Location = New System.Drawing.Point(812, 551)
+        Me.FlowPanel.Location = New System.Drawing.Point(4, 57)
         Me.FlowPanel.Name = "FlowPanel"
-        Me.FlowPanel.Size = New System.Drawing.Size(168, 77)
+        Me.FlowPanel.Size = New System.Drawing.Size(168, 57)
         Me.FlowPanel.TabIndex = 87
         '
         'Label20
@@ -369,7 +389,7 @@ Partial Class MainForm
         Me.Label20.AutoSize = True
         Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label20.ForeColor = System.Drawing.Color.DarkGreen
-        Me.Label20.Location = New System.Drawing.Point(31, 26)
+        Me.Label20.Location = New System.Drawing.Point(35, 10)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(37, 15)
         Me.Label20.TabIndex = 18
@@ -380,7 +400,7 @@ Partial Class MainForm
         '
         Me.FlowCurrentLabel.AutoSize = True
         Me.FlowCurrentLabel.ForeColor = System.Drawing.Color.DarkGreen
-        Me.FlowCurrentLabel.Location = New System.Drawing.Point(119, 52)
+        Me.FlowCurrentLabel.Location = New System.Drawing.Point(123, 36)
         Me.FlowCurrentLabel.Name = "FlowCurrentLabel"
         Me.FlowCurrentLabel.Size = New System.Drawing.Size(34, 13)
         Me.FlowCurrentLabel.TabIndex = 2
@@ -390,7 +410,7 @@ Partial Class MainForm
         '
         Me.Label18.AutoSize = True
         Me.Label18.ForeColor = System.Drawing.Color.DarkGreen
-        Me.Label18.Location = New System.Drawing.Point(13, 52)
+        Me.Label18.Location = New System.Drawing.Point(17, 36)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(99, 13)
         Me.Label18.TabIndex = 16
@@ -401,7 +421,7 @@ Partial Class MainForm
         Me.FlowDigi.BackColor = System.Drawing.Color.Transparent
         Me.FlowDigi.DigitColor = System.Drawing.Color.DarkGreen
         Me.FlowDigi.DigitText = "0000"
-        Me.FlowDigi.Location = New System.Drawing.Point(70, 18)
+        Me.FlowDigi.Location = New System.Drawing.Point(74, 2)
         Me.FlowDigi.Name = "FlowDigi"
         Me.FlowDigi.Size = New System.Drawing.Size(67, 31)
         Me.FlowDigi.TabIndex = 17
@@ -411,7 +431,7 @@ Partial Class MainForm
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label17.ForeColor = System.Drawing.Color.DarkGreen
-        Me.Label17.Location = New System.Drawing.Point(3, 26)
+        Me.Label17.Location = New System.Drawing.Point(3, 7)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(69, 30)
         Me.Label17.TabIndex = 78
@@ -421,7 +441,7 @@ Partial Class MainForm
         'FlowSPUpDown
         '
         Me.FlowSPUpDown.Increment = New Decimal(New Integer() {10, 0, 0, 0})
-        Me.FlowSPUpDown.Location = New System.Drawing.Point(145, 31)
+        Me.FlowSPUpDown.Location = New System.Drawing.Point(145, 12)
         Me.FlowSPUpDown.Maximum = New Decimal(New Integer() {2000, 0, 0, 0})
         Me.FlowSPUpDown.Minimum = New Decimal(New Integer() {200, 0, 0, 0})
         Me.FlowSPUpDown.Name = "FlowSPUpDown"
@@ -434,7 +454,7 @@ Partial Class MainForm
         Me.FlowSPDigi.BackColor = System.Drawing.Color.Transparent
         Me.FlowSPDigi.DigitColor = System.Drawing.Color.DarkGreen
         Me.FlowSPDigi.DigitText = "0000"
-        Me.FlowSPDigi.Location = New System.Drawing.Point(70, 25)
+        Me.FlowSPDigi.Location = New System.Drawing.Point(70, 6)
         Me.FlowSPDigi.Name = "FlowSPDigi"
         Me.FlowSPDigi.Size = New System.Drawing.Size(69, 31)
         Me.FlowSPDigi.TabIndex = 77
@@ -650,7 +670,7 @@ Partial Class MainForm
         '
         'FlowGraph
         '
-        Me.FlowGraph.Location = New System.Drawing.Point(3, 3)
+        Me.FlowGraph.Location = New System.Drawing.Point(5, 5)
         Me.FlowGraph.Name = "FlowGraph"
         Me.FlowGraph.ScrollGrace = 0.0R
         Me.FlowGraph.ScrollMaxX = 0.0R
@@ -659,18 +679,18 @@ Partial Class MainForm
         Me.FlowGraph.ScrollMinX = 0.0R
         Me.FlowGraph.ScrollMinY = 0.0R
         Me.FlowGraph.ScrollMinY2 = 0.0R
-        Me.FlowGraph.Size = New System.Drawing.Size(760, 370)
+        Me.FlowGraph.Size = New System.Drawing.Size(760, 396)
         Me.FlowGraph.TabIndex = 88
         '
-        'GraphClearButton
+        'FlowGraphClearButton
         '
-        Me.GraphClearButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GraphClearButton.Location = New System.Drawing.Point(681, 323)
-        Me.GraphClearButton.Name = "GraphClearButton"
-        Me.GraphClearButton.Size = New System.Drawing.Size(75, 23)
-        Me.GraphClearButton.TabIndex = 89
-        Me.GraphClearButton.Text = "Clear"
-        Me.GraphClearButton.UseVisualStyleBackColor = True
+        Me.FlowGraphClearButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FlowGraphClearButton.Location = New System.Drawing.Point(667, 348)
+        Me.FlowGraphClearButton.Name = "FlowGraphClearButton"
+        Me.FlowGraphClearButton.Size = New System.Drawing.Size(75, 23)
+        Me.FlowGraphClearButton.TabIndex = 89
+        Me.FlowGraphClearButton.Text = "Clear"
+        Me.FlowGraphClearButton.UseVisualStyleBackColor = True
         '
         'SwitchPanel
         '
@@ -717,7 +737,8 @@ Partial Class MainForm
         'TabControl1
         '
         Me.TabControl1.Controls.Add(Me.LiveTab)
-        Me.TabControl1.Controls.Add(Me.PlotTab)
+        Me.TabControl1.Controls.Add(Me.FlowTab)
+        Me.TabControl1.Controls.Add(Me.LevelTab)
         Me.TabControl1.Location = New System.Drawing.Point(7, 233)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
@@ -726,6 +747,7 @@ Partial Class MainForm
         '
         'LiveTab
         '
+        Me.LiveTab.BackColor = System.Drawing.Color.FromArgb(CType(CType(182, Byte), Integer), CType(CType(216, Byte), Integer), CType(CType(205, Byte), Integer))
         Me.LiveTab.Controls.Add(Me.WaterFlowSystem1)
         Me.LiveTab.Location = New System.Drawing.Point(4, 22)
         Me.LiveTab.Name = "LiveTab"
@@ -733,7 +755,6 @@ Partial Class MainForm
         Me.LiveTab.Size = New System.Drawing.Size(773, 405)
         Me.LiveTab.TabIndex = 0
         Me.LiveTab.Text = "Live"
-        Me.LiveTab.UseVisualStyleBackColor = True
         '
         'WaterFlowSystem1
         '
@@ -746,30 +767,64 @@ Partial Class MainForm
         Me.WaterFlowSystem1.FlowMaxValue = 1000
         Me.WaterFlowSystem1.FlowMinValue = 0
         Me.WaterFlowSystem1.FlowTime = 20
-        Me.WaterFlowSystem1.LevelCurrent = "10"
+        Me.WaterFlowSystem1.LevelCurrent = 4.0R
         Me.WaterFlowSystem1.LevelSetPoint = 0
-        Me.WaterFlowSystem1.LevelUnit = "%"
         Me.WaterFlowSystem1.Location = New System.Drawing.Point(-3, -16)
         Me.WaterFlowSystem1.Name = "WaterFlowSystem1"
         Me.WaterFlowSystem1.OverFlow = False
         Me.WaterFlowSystem1.OverFlowAt = 90
-        Me.WaterFlowSystem1.Size = New System.Drawing.Size(865, 475)
+        Me.WaterFlowSystem1.Size = New System.Drawing.Size(770, 420)
         Me.WaterFlowSystem1.StepSize = 5
         Me.WaterFlowSystem1.TabIndex = 0
-        Me.WaterFlowSystem1.TankLevel = 50
         Me.WaterFlowSystem1.TankRange = 100
+        Me.WaterFlowSystem1.WaterLevel = 0
         '
-        'PlotTab
+        'FlowTab
         '
-        Me.PlotTab.Controls.Add(Me.GraphClearButton)
-        Me.PlotTab.Controls.Add(Me.FlowGraph)
-        Me.PlotTab.Location = New System.Drawing.Point(4, 22)
-        Me.PlotTab.Name = "PlotTab"
-        Me.PlotTab.Padding = New System.Windows.Forms.Padding(3)
-        Me.PlotTab.Size = New System.Drawing.Size(773, 405)
-        Me.PlotTab.TabIndex = 1
-        Me.PlotTab.Text = "Plot"
-        Me.PlotTab.UseVisualStyleBackColor = True
+        Me.FlowTab.Controls.Add(Me.FlowGraphClearButton)
+        Me.FlowTab.Controls.Add(Me.FlowGraph)
+        Me.FlowTab.Location = New System.Drawing.Point(4, 22)
+        Me.FlowTab.Name = "FlowTab"
+        Me.FlowTab.Padding = New System.Windows.Forms.Padding(3)
+        Me.FlowTab.Size = New System.Drawing.Size(773, 405)
+        Me.FlowTab.TabIndex = 1
+        Me.FlowTab.Text = "Flow"
+        Me.FlowTab.UseVisualStyleBackColor = True
+        '
+        'LevelTab
+        '
+        Me.LevelTab.BackColor = System.Drawing.Color.White
+        Me.LevelTab.Controls.Add(Me.LevelGraphClearButton)
+        Me.LevelTab.Controls.Add(Me.LevelGraph)
+        Me.LevelTab.Location = New System.Drawing.Point(4, 22)
+        Me.LevelTab.Name = "LevelTab"
+        Me.LevelTab.Size = New System.Drawing.Size(773, 405)
+        Me.LevelTab.TabIndex = 2
+        Me.LevelTab.Text = "Level"
+        '
+        'LevelGraphClearButton
+        '
+        Me.LevelGraphClearButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LevelGraphClearButton.Location = New System.Drawing.Point(667, 348)
+        Me.LevelGraphClearButton.Name = "LevelGraphClearButton"
+        Me.LevelGraphClearButton.Size = New System.Drawing.Size(75, 23)
+        Me.LevelGraphClearButton.TabIndex = 90
+        Me.LevelGraphClearButton.Text = "Clear"
+        Me.LevelGraphClearButton.UseVisualStyleBackColor = True
+        '
+        'LevelGraph
+        '
+        Me.LevelGraph.Location = New System.Drawing.Point(5, 5)
+        Me.LevelGraph.Name = "LevelGraph"
+        Me.LevelGraph.ScrollGrace = 0.0R
+        Me.LevelGraph.ScrollMaxX = 0.0R
+        Me.LevelGraph.ScrollMaxY = 0.0R
+        Me.LevelGraph.ScrollMaxY2 = 0.0R
+        Me.LevelGraph.ScrollMinX = 0.0R
+        Me.LevelGraph.ScrollMinY = 0.0R
+        Me.LevelGraph.ScrollMinY2 = 0.0R
+        Me.LevelGraph.Size = New System.Drawing.Size(760, 396)
+        Me.LevelGraph.TabIndex = 89
         '
         'Panel1
         '
@@ -800,9 +855,9 @@ Partial Class MainForm
         Me.Panel5.Controls.Add(Me.Label17)
         Me.Panel5.Controls.Add(Me.FlowSPDigi)
         Me.Panel5.Controls.Add(Me.FlowSPUpDown)
-        Me.Panel5.Location = New System.Drawing.Point(812, 456)
+        Me.Panel5.Location = New System.Drawing.Point(4, 3)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(168, 77)
+        Me.Panel5.Size = New System.Drawing.Size(168, 48)
         Me.Panel5.TabIndex = 96
         '
         'Panel6
@@ -812,14 +867,14 @@ Partial Class MainForm
         Me.Panel6.Controls.Add(Me.mATextBox)
         Me.Panel6.Controls.Add(Me.Label5)
         Me.Panel6.Controls.Add(Me.Panel7)
-        Me.Panel6.Location = New System.Drawing.Point(811, 288)
+        Me.Panel6.Location = New System.Drawing.Point(809, 249)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(169, 150)
+        Me.Panel6.Size = New System.Drawing.Size(176, 150)
         Me.Panel6.TabIndex = 97
         '
         'mATextBox
         '
-        Me.mATextBox.Location = New System.Drawing.Point(116, 120)
+        Me.mATextBox.Location = New System.Drawing.Point(119, 120)
         Me.mATextBox.Mask = "00.0"
         Me.mATextBox.Name = "mATextBox"
         Me.mATextBox.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
@@ -832,7 +887,7 @@ Partial Class MainForm
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(3, 122)
+        Me.Label5.Location = New System.Drawing.Point(6, 122)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(113, 15)
         Me.Label5.TabIndex = 18
@@ -845,7 +900,7 @@ Partial Class MainForm
         Me.Panel7.Controls.Add(Me.mATrackBar)
         Me.Panel7.Controls.Add(Me.mADigi)
         Me.Panel7.Controls.Add(Me.Label7)
-        Me.Panel7.Location = New System.Drawing.Point(6, 20)
+        Me.Panel7.Location = New System.Drawing.Point(9, 20)
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(157, 94)
         Me.Panel7.TabIndex = 99
@@ -900,7 +955,7 @@ Partial Class MainForm
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.Black
-        Me.Label8.Location = New System.Drawing.Point(846, 278)
+        Me.Label8.Location = New System.Drawing.Point(851, 239)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(91, 15)
         Me.Label8.TabIndex = 98
@@ -964,6 +1019,121 @@ Partial Class MainForm
         Me.SolValLed.TabIndex = 42
         Me.SolValLed.TabStop = False
         '
+        'FlowContainerPanel
+        '
+        Me.FlowContainerPanel.Controls.Add(Me.Panel5)
+        Me.FlowContainerPanel.Controls.Add(Me.FlowPanel)
+        Me.FlowContainerPanel.Location = New System.Drawing.Point(805, 405)
+        Me.FlowContainerPanel.Name = "FlowContainerPanel"
+        Me.FlowContainerPanel.Size = New System.Drawing.Size(180, 120)
+        Me.FlowContainerPanel.TabIndex = 102
+        '
+        'LevelContainerPanel
+        '
+        Me.LevelContainerPanel.Controls.Add(Me.Panel10)
+        Me.LevelContainerPanel.Controls.Add(Me.Panel11)
+        Me.LevelContainerPanel.Location = New System.Drawing.Point(805, 537)
+        Me.LevelContainerPanel.Name = "LevelContainerPanel"
+        Me.LevelContainerPanel.Size = New System.Drawing.Size(180, 120)
+        Me.LevelContainerPanel.TabIndex = 103
+        '
+        'Panel10
+        '
+        Me.Panel10.Controls.Add(Me.Label10)
+        Me.Panel10.Controls.Add(Me.LevelSPDigi)
+        Me.Panel10.Controls.Add(Me.LevelSPUpDown)
+        Me.Panel10.Location = New System.Drawing.Point(4, 3)
+        Me.Panel10.Name = "Panel10"
+        Me.Panel10.Size = New System.Drawing.Size(168, 48)
+        Me.Panel10.TabIndex = 96
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.Blue
+        Me.Label10.Location = New System.Drawing.Point(8, 9)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(65, 30)
+        Me.Label10.TabIndex = 78
+        Me.Label10.Text = "Level" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Set Point"
+        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'LevelSPDigi
+        '
+        Me.LevelSPDigi.BackColor = System.Drawing.Color.Transparent
+        Me.LevelSPDigi.DigitColor = System.Drawing.Color.Blue
+        Me.LevelSPDigi.DigitText = "000"
+        Me.LevelSPDigi.Location = New System.Drawing.Point(70, 6)
+        Me.LevelSPDigi.Name = "LevelSPDigi"
+        Me.LevelSPDigi.Size = New System.Drawing.Size(69, 31)
+        Me.LevelSPDigi.TabIndex = 77
+        '
+        'LevelSPUpDown
+        '
+        Me.LevelSPUpDown.Increment = New Decimal(New Integer() {10, 0, 0, 0})
+        Me.LevelSPUpDown.Location = New System.Drawing.Point(145, 12)
+        Me.LevelSPUpDown.Maximum = New Decimal(New Integer() {2000, 0, 0, 0})
+        Me.LevelSPUpDown.Minimum = New Decimal(New Integer() {200, 0, 0, 0})
+        Me.LevelSPUpDown.Name = "LevelSPUpDown"
+        Me.LevelSPUpDown.Size = New System.Drawing.Size(18, 20)
+        Me.LevelSPUpDown.TabIndex = 79
+        Me.LevelSPUpDown.Value = New Decimal(New Integer() {200, 0, 0, 0})
+        '
+        'Panel11
+        '
+        Me.Panel11.BackColor = System.Drawing.Color.Transparent
+        Me.Panel11.Controls.Add(Me.Label13)
+        Me.Panel11.Controls.Add(Me.LevelCurrentLabel)
+        Me.Panel11.Controls.Add(Me.Label15)
+        Me.Panel11.Controls.Add(Me.LevelDigi)
+        Me.Panel11.Location = New System.Drawing.Point(4, 57)
+        Me.Panel11.Name = "Panel11"
+        Me.Panel11.Size = New System.Drawing.Size(168, 57)
+        Me.Panel11.TabIndex = 87
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.ForeColor = System.Drawing.Color.Blue
+        Me.Label13.Location = New System.Drawing.Point(28, 10)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(41, 15)
+        Me.Label13.TabIndex = 18
+        Me.Label13.Text = "Level"
+        Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'LevelCurrentLabel
+        '
+        Me.LevelCurrentLabel.AutoSize = True
+        Me.LevelCurrentLabel.ForeColor = System.Drawing.Color.Blue
+        Me.LevelCurrentLabel.Location = New System.Drawing.Point(123, 36)
+        Me.LevelCurrentLabel.Name = "LevelCurrentLabel"
+        Me.LevelCurrentLabel.Size = New System.Drawing.Size(34, 13)
+        Me.LevelCurrentLabel.TabIndex = 2
+        Me.LevelCurrentLabel.Text = "00.00"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.ForeColor = System.Drawing.Color.Blue
+        Me.Label15.Location = New System.Drawing.Point(17, 36)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(99, 13)
+        Me.Label15.TabIndex = 16
+        Me.Label15.Text = "Sensor Output (mA)"
+        '
+        'LevelDigi
+        '
+        Me.LevelDigi.BackColor = System.Drawing.Color.Transparent
+        Me.LevelDigi.DigitColor = System.Drawing.Color.Blue
+        Me.LevelDigi.DigitText = "000"
+        Me.LevelDigi.Location = New System.Drawing.Point(72, 2)
+        Me.LevelDigi.Name = "LevelDigi"
+        Me.LevelDigi.Size = New System.Drawing.Size(67, 31)
+        Me.LevelDigi.TabIndex = 17
+        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -971,13 +1141,14 @@ Partial Class MainForm
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(182, Byte), Integer), CType(CType(216, Byte), Integer), CType(CType(205, Byte), Integer))
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1011, 669)
+        Me.Controls.Add(Me.LevelContainerPanel)
+        Me.Controls.Add(Me.FlowContainerPanel)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Panel8)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.PictureBox6)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Panel6)
-        Me.Controls.Add(Me.Panel5)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label11)
@@ -991,7 +1162,6 @@ Partial Class MainForm
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.SwitchPanel)
-        Me.Controls.Add(Me.FlowPanel)
         Me.Controls.Add(Me.MenuStrip)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -1021,7 +1191,8 @@ Partial Class MainForm
         CType(Me.AutoImage, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl1.ResumeLayout(False)
         Me.LiveTab.ResumeLayout(False)
-        Me.PlotTab.ResumeLayout(False)
+        Me.FlowTab.ResumeLayout(False)
+        Me.LevelTab.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
@@ -1035,6 +1206,13 @@ Partial Class MainForm
         Me.Panel8.ResumeLayout(False)
         CType(Me.SolValButton, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SolValLed, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.FlowContainerPanel.ResumeLayout(False)
+        Me.LevelContainerPanel.ResumeLayout(False)
+        Me.Panel10.ResumeLayout(False)
+        Me.Panel10.PerformLayout()
+        CType(Me.LevelSPUpDown, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel11.ResumeLayout(False)
+        Me.Panel11.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1089,7 +1267,7 @@ Partial Class MainForm
     Friend WithEvents CompressorButton As System.Windows.Forms.PictureBox
     Friend WithEvents DAQTemperatureLabel As System.Windows.Forms.Label
     Friend WithEvents FlowGraph As ZedGraph.ZedGraphControl
-    Friend WithEvents GraphClearButton As System.Windows.Forms.Button
+    Friend WithEvents FlowGraphClearButton As System.Windows.Forms.Button
     Friend WithEvents PictureBox7 As System.Windows.Forms.PictureBox
     Friend WithEvents BuzzerLabel As System.Windows.Forms.Label
     Friend WithEvents BuzzerArc As Arc.Arc
@@ -1101,7 +1279,7 @@ Partial Class MainForm
     Friend WithEvents ProcessControlSettingsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
     Friend WithEvents LiveTab As System.Windows.Forms.TabPage
-    Friend WithEvents PlotTab As System.Windows.Forms.TabPage
+    Friend WithEvents FlowTab As System.Windows.Forms.TabPage
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
     Friend WithEvents Panel5 As System.Windows.Forms.Panel
@@ -1122,5 +1300,19 @@ Partial Class MainForm
     Friend WithEvents Panel8 As System.Windows.Forms.Panel
     Friend WithEvents SolValButton As System.Windows.Forms.PictureBox
     Friend WithEvents SolValLed As System.Windows.Forms.PictureBox
+    Friend WithEvents LevelTab As System.Windows.Forms.TabPage
+    Friend WithEvents LevelGraph As ZedGraph.ZedGraphControl
+    Friend WithEvents LevelGraphClearButton As System.Windows.Forms.Button
+    Friend WithEvents FlowContainerPanel As System.Windows.Forms.Panel
+    Friend WithEvents LevelContainerPanel As System.Windows.Forms.Panel
+    Friend WithEvents Panel10 As System.Windows.Forms.Panel
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents LevelSPDigi As Owf.Controls.DigitalDisplayControl
+    Friend WithEvents LevelSPUpDown As System.Windows.Forms.NumericUpDown
+    Friend WithEvents Panel11 As System.Windows.Forms.Panel
+    Friend WithEvents Label13 As System.Windows.Forms.Label
+    Friend WithEvents LevelCurrentLabel As System.Windows.Forms.Label
+    Friend WithEvents Label15 As System.Windows.Forms.Label
+    Friend WithEvents LevelDigi As Owf.Controls.DigitalDisplayControl
 
 End Class

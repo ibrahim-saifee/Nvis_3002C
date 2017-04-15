@@ -1,1 +1,1 @@
-Database=Scientech2476_1v0;Data Source=localhost;User Id=root;Password=control;Allow User Variables=True
+Database=Nvis3002C_1v0;Data Source=localhost;User Id=root;Password=control;Allow User Variables=True

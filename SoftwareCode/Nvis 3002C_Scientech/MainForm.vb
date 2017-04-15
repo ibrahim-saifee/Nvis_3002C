@@ -15,18 +15,23 @@ Public Class MainForm
     Dim IsHardCompressorX3Pressed As Boolean = False
     Dim IsHardPumpX2Pressed As Boolean = False
 
-    Dim VisualIndicatorY1 = "0"
-    Dim PumpY2 As String = "0"
-    Dim CompressorY3 As String = "0"
-    Dim BuzzerY0 = "0"
+    Dim PumpY0 As String = "0"
+    Dim SolenoidValveY1 As String = "0"
+    Dim CompressorY2 As String = "0"
+    Dim VisualIndicatorY3 = "0"
+    Dim BuzzerY4 = "0"
 
     Dim ControlValveDAC0 As Integer
 
     Dim IsStartPressed = False
     'Dim IsHardEmergency = False
 
-    Dim FlowLineItem, SetPointLineItem As LineItem
+    Dim FlowLineItem, FlowSetPointLineItem As LineItem
     Dim FlowPointPair, SetPointPointPair As New PointPairList
+
+    Dim LevelLineItem, LevelSetPointLineItem As LineItem
+    Dim LevelPointPair, LevelSetPointPointPair As New PointPairList
+
     'Dim RTDTemperatureSPLineItem, TTemperatureSPLineItem As LineItem
     'Dim RTDTemperatureSPPointPair, TTemperatureSPPointPair As New PointPairList
 
@@ -34,12 +39,15 @@ Public Class MainForm
     Public SQLReader As MySqlDataReader
     Dim SQLCommand As MySqlCommand
     Public Shared SQLConnectionString, SQLInitConnectionString, DatabaseName As String
+    Public Shared FlowTableName As String = "Flow_1v0"
+    Public Shared LevelTableName As String = "Level_1v0"
 
     Public ProportionalConstant As Double = 30 / 100
     Public DerivativeConstant As Double = 30 / 50 * 1
     Public IntegralConstant As Double = 30 * 80 / 1
 
     Public FlowValue As Double
+    Public CurrentLevel As Double
 
     Dim Logging As Boolean = False
 
@@ -47,10 +55,10 @@ Public Class MainForm
 
     Private Sub Switch_Buzzer(ByVal state As Boolean)
         If state = True Then
-            BuzzerY0 = "1"
+            BuzzerY4 = "1"
             BuzzerArc.Animate = True
         Else
-            BuzzerY0 = "0"
+            BuzzerY4 = "0"
             BuzzerArc.Animate = False
             BuzzerArc.Progress = 0
         End If
@@ -58,35 +66,47 @@ Public Class MainForm
 
     Private Sub Switch_VisualIndicator(ByVal state As Boolean)
         If state = True Then
-            VisualIndicatorY1 = "1"
+            VisualIndicatorY3 = "1"
             VisualIndicatorLed.BackgroundImage = My.Resources.blue_led_on1
         Else
-            VisualIndicatorY1 = "0"
+            VisualIndicatorY3 = "0"
             VisualIndicatorLed.BackgroundImage = My.Resources.blue_led_off
         End If
     End Sub
 
     Private Sub Switch_Compressor(ByVal state As Boolean)
         If state = True Then
-            CompressorY3 = "1"
+            CompressorY2 = "1"
             CompressorLed.BackgroundImage = My.Resources.green_led_on
         Else
-            CompressorY3 = "0"
+            CompressorY2 = "0"
             CompressorLed.BackgroundImage = My.Resources.green_led_off
         End If
     End Sub
 
     Private Sub Switch_Pump(ByVal state As Boolean)
         If state = True Then
-            PumpY2 = "1"
+            PumpY0 = "1"
             PumpLed.BackgroundImage = My.Resources.red_led_on
             WaterFlowSystem1.Fill = True
             PumpTimer.Enabled = True
         Else
-            PumpY2 = "0"
+            PumpY0 = "0"
             PumpLed.BackgroundImage = My.Resources.red_led_off
             WaterFlowSystem1.Fill = False
             PumpTimer.Enabled = False
+        End If
+    End Sub
+
+    Private Sub Switch_SolenoidValve(ByVal state As Boolean)
+        If state = True Then
+            SolenoidValveY1 = "1"
+            SolValLed.BackgroundImage = My.Resources.red_led_on
+            WaterFlowSystem1.Drain = True
+        Else
+            SolenoidValveY1 = "0"
+            SolValLed.BackgroundImage = My.Resources.red_led_off
+            WaterFlowSystem1.Drain = False
         End If
     End Sub
 
@@ -178,7 +198,7 @@ Public Class MainForm
 
     Private Sub CompressorButton_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles CompressorButton.MouseDown
         If (IsStartPressed = False) Then Exit Sub
-        If CompressorY3 = "1" Then
+        If CompressorY2 = "1" Then
             Switch_Compressor(False)
         Else
             Switch_Compressor(True)
@@ -192,7 +212,7 @@ Public Class MainForm
 
     Private Sub PumpButton_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PumpButton.MouseDown
         If (IsStartPressed = False) Then Exit Sub
-        If PumpY2 = "1" Then
+        If PumpY0 = "1" Then
             Switch_Pump(False)
         Else
             Switch_Pump(True)
@@ -203,6 +223,18 @@ Public Class MainForm
         PumpButton.BackgroundImage = My.Resources.Buttons_yellow_off
     End Sub
 
+    Private Sub SolValButton_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles SolValButton.MouseDown
+        If (IsStartPressed = False) Then Exit Sub
+        If SolenoidValveY1 = "1" Then
+            Switch_SolenoidValve(False)
+        Else
+            Switch_SolenoidValve(True)
+        End If
+        PumpButton.BackgroundImage = My.Resources.Buttons_yellow_on
+    End Sub
+    Private Sub SolValpButton_MouseUp(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles SolValButton.MouseUp
+        SolValButton.BackgroundImage = My.Resources.Buttons_yellow_off
+    End Sub
 
     Private Sub AllOFF()
         Switch_Compressor(False)
@@ -248,10 +280,17 @@ Public Class MainForm
                 FlowValue = FlowValue * 1000 / 120 ' Covert ADC voltage to current (mA) having 120E resistance
                 WaterFlowSystem1.FlowCurrentValue = FlowValue
                 FlowCurrentLabel.Text = FlowValue.ToString("0.0")
-                FlowValue = FormatNumber((FlowValue - 4) * 2500 / 16, 1) ' Scaling of 4mA to 20mA with 0 (Ltr/Hr) to 100 (Ltr/Hr)
+                FlowValue = FormatNumber((FlowValue - 4) * 1000 / 16, 1) ' Scaling of 4mA to 20mA with 0 (Ltr/Hr) to 1000 (Ltr/Min)
                 'WaterFlowSystem1.FlowValuevalue = FlowValue
                 FlowDigi.DigitText = CInt(FlowValue)
-                'ElseIf StringCollector.Substring(25, 1) = "1" Then
+            ElseIf StringCollector.Substring(25, 1) = "1" Then
+                CurrentLevel = (CDbl(StringCollector.Substring(1, 8)) * 5) / 16777215
+                CurrentLevel = FormatNumber(CurrentLevel * 1000 / 120, 1) ' Covert ADC voltage to current (mA) having 120E resistance
+                CurrentLevel = (CurrentLevel - 4) * 100 / 16 ' Scaling 4ma to 20mA to 0% to 100% water level
+                If WaterFlowSystem1.WaterLevel <> CInt(CurrentLevel) Then
+                WaterFlowSystem1.WaterLevel = CInt(CurrentLevel)
+                End If
+                'LevelDigi.DigitText = CInt(CurrentLevel)
             End If
 
             StringCollector = ""
@@ -270,7 +309,7 @@ Public Class MainForm
                 '    '    Open_ControlValve(10)
                 '    'Else
                 '    '    Switch_Pump(False)
-                '    '    'CompressorY3 = "0"
+                '    '    'CompressorY2 = "0"
                 '    '    'CompressorLed.BackgroundImage = My.Resources.green_led_off
                 '    '    Open_ControlValve(0)
                 '    'End If
@@ -341,18 +380,23 @@ Public Class MainForm
             .Scale.MinorUnit = DateUnit.Second
             .Scale.MinorStep = 1
         End With
-        FlowGraph.RestoreScale(FlowGraph.GraphPane)
-        With FlowGraph.GraphPane.XAxis
+        FlowSetPointLineItem.AddPoint(CurrentDateTime.ToOADate(), FlowSPUpDown.Value)
+        FlowLineItem.AddPoint(CurrentDateTime.ToOADate(), FlowValue)
+        FlowGraph.AxisChange()
+        FlowGraph.Refresh()
+
+        LevelGraph.RestoreScale(LevelGraph.GraphPane)
+        With LevelGraph.GraphPane.XAxis
             .Type = AxisType.Date
             .Scale.Format = "HH:mm:ss"
             .Scale.MajorUnit = DateUnit.Hour
             .Scale.MinorUnit = DateUnit.Second
             .Scale.MinorStep = 1
         End With
-        SetPointLineItem.AddPoint(CurrentDateTime.ToOADate(), FlowSPUpDown.Value)
-        FlowLineItem.AddPoint(CurrentDateTime.ToOADate(), FlowValue)
-        FlowGraph.AxisChange()
-        FlowGraph.Refresh()
+        LevelSetPointLineItem.AddPoint(CurrentDateTime.ToOADate(), LevelSPUpDown.Value)
+        LevelLineItem.AddPoint(CurrentDateTime.ToOADate(), LevelValue)
+        LevelGraph.AxisChange()
+        LevelGraph.Refresh()
 
         If Logging = False Then Exit Sub
         Dim dt As String = ""
@@ -360,7 +404,20 @@ Public Class MainForm
         SQLConnection.ConnectionString = SQLConnectionString
         Try
             SQLConnection.Open()
-            SQLCommand = New MySqlCommand("insert into " + DatabaseName + "(datetime,SetPoint,FlowValue) values('" + dt + "'," + FlowSPUpDown.Value.ToString + "," + CInt(FlowValue).ToString + ");", SQLConnection)
+            SQLCommand = New MySqlCommand("insert into " + FlowTableName + "(datetime,SetPoint,FlowValue) values('" + dt + "'," + FlowSPUpDown.Value.ToString + "," + CInt(FlowValue).ToString + ");", SQLConnection)
+            SQLCommand.ExecuteReader()
+            SQLConnection.Close()
+        Catch ex As Exception
+            LoggingToolStripMenuItem.Text = "Stop &Logging"
+            LoggingToolStripMenuItem_Click(Nothing, Nothing)
+            MessageBox.Show(Me, "Can't insert data to database, check if you have entered correct database password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Finally
+            SQLConnection.Close()
+        End Try
+
+        Try
+            SQLConnection.Open()
+            SQLCommand = New MySqlCommand("insert into " + LevelTableName + "(datetime,SetPoint,LevelValue) values('" + dt + "'," + LevelSPUpDown.Value.ToString + "," + CInt(CurrentLevel).ToString + ");", SQLConnection)
             SQLCommand.ExecuteReader()
             SQLConnection.Close()
         Catch ex As Exception
@@ -394,7 +451,7 @@ Public Class MainForm
 
         If DI.Substring(2, 1) = "1" And IsHardPumpX2Pressed = False Then
             IsHardPumpX2Pressed = True
-            If PumpY2 = "1" Then
+            If PumpY0 = "1" Then
                 Switch_Pump(False)
             Else
                 Switch_Pump(True)
@@ -405,7 +462,7 @@ Public Class MainForm
 
         If DI.Substring(3, 1) = "1" And IsHardCompressorX3Pressed = False Then
             IsHardCompressorX3Pressed = True
-            If CompressorY3 = "1" Then
+            If CompressorY2 = "1" Then
                 Switch_Compressor(False)
             Else
                 Switch_Compressor(True)
@@ -450,16 +507,24 @@ Public Class MainForm
 
 
     Private Sub MainForm_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Open_ControlValve(100)
+        Open_ControlValve(0)
         LoadIPFile()
 
         Dim FlowGraphPane As GraphPane = FlowGraph.GraphPane
 
-        SetPointLineItem = FlowGraphPane.AddCurve("Set Point", SetPointPointPair, Color.Blue, SymbolType.None)
-        GraphSettings(FlowGraph, FlowGraphPane, SetPointLineItem, "Set Point (psi)", 100)
+        FlowSetPointLineItem = FlowGraphPane.AddCurve("Set Point", SetPointPointPair, Color.Blue, SymbolType.None)
+        GraphSettings(FlowGraph, FlowGraphPane, FlowSetPointLineItem, "Set Point (Ltr/min)", 500)
 
         FlowLineItem = FlowGraphPane.AddCurve("Flow", FlowPointPair, Color.Red, SymbolType.None)
-        GraphSettings(FlowGraph, FlowGraphPane, FlowLineItem, "Flow (Ltr/min)", 100)
+        GraphSettings(FlowGraph, FlowGraphPane, FlowLineItem, "Flow (Ltr/min)", 500)
+
+        Dim LevelGraphPane As GraphPane = LevelGraph.GraphPane
+
+        LevelSetPointLineItem = levelGraphPane.AddCurve("Set Point", SetPointPointPair, Color.Blue, SymbolType.None)
+        GraphSettings(LevelGraph, levelGraphPane, LevelSetPointLineItem, "Set Point", 100)
+
+        LevelLineItem = levelGraphPane.AddCurve("Level", LevelPointPair, Color.Red, SymbolType.None)
+        GraphSettings(LevelGraph, LevelGraphPane, LevelLineItem, "Level", 100)
 
         SQLConnection = New MySqlConnection
         LoadFileConnectionString()
@@ -485,7 +550,7 @@ Public Class MainForm
         BuzzerArc.Distance = 10
 
         FlowSPUpDown.Value = 800
-
+        WaterFlowSystem1.WaterLevel = 50
         PumpTimer.Interval = 60000
     End Sub
 
@@ -534,7 +599,16 @@ Public Class MainForm
         End Try
         Try
             SQLConnection.Open()
-            SQLCommand = New MySqlCommand("Create table " + DatabaseName + "." + DatabaseName + "(datetime datetime,SetPoint integer,FlowValue integer);", SQLConnection)
+            SQLCommand = New MySqlCommand("Create table " + DatabaseName + "." + FlowTableName + "(datetime datetime,SetPoint integer,FlowValue integer);", SQLConnection)
+            SQLCommand.ExecuteReader()
+            SQLConnection.Close()
+        Catch
+        Finally
+            SQLConnection.Close()
+        End Try
+        Try
+            SQLConnection.Open()
+            SQLCommand = New MySqlCommand("Create table " + DatabaseName + "." + LevelTableName + "(datetime datetime,SetPoint integer,LevelValue integer);", SQLConnection)
             SQLCommand.ExecuteReader()
         Catch
         End Try
@@ -554,7 +628,7 @@ Public Class MainForm
         End If
         Try
             If (Ethernet.IsConnected()) Then
-                Ethernet.Send("A" + ChannelNumber.ToString("0") + BuzzerY0 + VisualIndicatorY1 + PumpY2 + CompressorY3 + "0000" + ControlValveDAC0.ToString("0000") + "0000")
+                Ethernet.Send("A" + ChannelNumber.ToString("0") + BuzzerY4 + VisualIndicatorY3 + PumpY0 + CompressorY2 + "0000" + ControlValveDAC0.ToString("0000") + "0000")
                 ' "A" + ChannelNumber +  Digital Output (8)+ DAC1.ToString("0000") + DAC2.ToString("0000")
                 'ChannelNumber += 1
                 'If ChannelNumber > 1 Then ChannelNumber = 0
@@ -577,9 +651,9 @@ Public Class MainForm
         mypane.Legend.Position = ZedGraph.LegendPos.Bottom
         mypane.Legend.FontSpec.Size = 16
         mypane.Legend.FontSpec.IsBold = True
-        mypane.Title.Text = "Flow vs Time"
+        mypane.Title.Text = yTitle + " vs Time"
         mypane.XAxis.Title.Text = "Time"
-        mypane.YAxis.Title.Text = "Flow (Ltr/min)"
+        mypane.YAxis.Title.Text = yTitle
         set_scale(mypane, range)
         mycurve.Label.Text = yTitle
         mycurve.Line.Width = 2.0
@@ -670,8 +744,8 @@ Public Class MainForm
     '    TabControl1.SelectedTab = level
     'End Sub
 
-    Private Sub GraphClearButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GraphClearButton.Click
-        SetPointLineItem.Clear()
+    Private Sub GraphClearButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles FlowGraphClearButton.Click
+        FlowSetPointLineItem.Clear()
         FlowLineItem.Clear()
         FlowGraph.Refresh()
     End Sub
@@ -762,6 +836,10 @@ Public Class MainForm
 
     Private Sub FlowSPUpDown_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles FlowSPUpDown.ValueChanged
         FlowSPDigi.DigitText = FlowSPUpDown.Value.ToString("00")
+    End Sub
+
+    Private Sub LevelSPUpDown_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LevelSPUpDown.ValueChanged
+        LevelSPDigi.DigitText = LevelSPUpDown.Value.ToString("00")
     End Sub
 
     Private Sub ProcessControlSettingsToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ProcessControlSettingsToolStripMenuItem.Click

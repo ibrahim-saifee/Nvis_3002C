@@ -54,7 +54,6 @@ Partial Class Nvis3002APanel
         Me.OverflowPipe1 = New System.Windows.Forms.Panel()
         Me.OverflowPipe2 = New System.Windows.Forms.Panel()
         Me.LevelLabel = New System.Windows.Forms.Label()
-        Me.LevelUnitLabel = New System.Windows.Forms.Label()
         Me.ValvImage = New System.Windows.Forms.PictureBox()
         Me.SquareTankNoStirrer1 = New SquareTankNoStirrer.SquareTankNoStirrer()
         Me.DrainPipe2 = New System.Windows.Forms.Panel()
@@ -64,9 +63,9 @@ Partial Class Nvis3002APanel
         Me.FillPipe1 = New System.Windows.Forms.Panel()
         Me.PictureBox12 = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.FlowDisplayPanel = New System.Windows.Forms.Panel()
         Me.FlowDigi = New Owf.Controls.DigitalDisplayControl()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.FlowSensorCurrentLabel = New System.Windows.Forms.Label()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
@@ -82,6 +81,7 @@ Partial Class Nvis3002APanel
         Me.PictureBox19 = New System.Windows.Forms.PictureBox()
         Me.BigValveTimer = New System.Windows.Forms.Timer(Me.components)
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.LevelCurrentLabel = New System.Windows.Forms.Label()
         CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -94,7 +94,7 @@ Partial Class Nvis3002APanel
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
-        Me.Panel3.SuspendLayout()
+        Me.FlowDisplayPanel.SuspendLayout()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FlowONPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -413,22 +413,11 @@ Partial Class Nvis3002APanel
         Me.LevelLabel.AutoSize = True
         Me.LevelLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LevelLabel.ForeColor = System.Drawing.Color.Blue
-        Me.LevelLabel.Location = New System.Drawing.Point(70, 56)
+        Me.LevelLabel.Location = New System.Drawing.Point(137, 39)
         Me.LevelLabel.Name = "LevelLabel"
-        Me.LevelLabel.Size = New System.Drawing.Size(21, 13)
+        Me.LevelLabel.Size = New System.Drawing.Size(38, 13)
         Me.LevelLabel.TabIndex = 38
-        Me.LevelLabel.Text = "10"
-        '
-        'LevelUnitLabel
-        '
-        Me.LevelUnitLabel.AutoSize = True
-        Me.LevelUnitLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LevelUnitLabel.ForeColor = System.Drawing.Color.Blue
-        Me.LevelUnitLabel.Location = New System.Drawing.Point(92, 56)
-        Me.LevelUnitLabel.Name = "LevelUnitLabel"
-        Me.LevelUnitLabel.Size = New System.Drawing.Size(16, 13)
-        Me.LevelUnitLabel.TabIndex = 41
-        Me.LevelUnitLabel.Text = "%"
+        Me.LevelLabel.Text = "(50%)"
         '
         'ValvImage
         '
@@ -513,49 +502,49 @@ Partial Class Nvis3002APanel
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.Gray
-        Me.Panel2.Controls.Add(Me.Panel3)
+        Me.Panel2.Controls.Add(Me.FlowDisplayPanel)
         Me.Panel2.Location = New System.Drawing.Point(325, 132)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(111, 69)
         Me.Panel2.TabIndex = 61
         '
-        'Panel3
+        'FlowDisplayPanel
         '
-        Me.Panel3.BackColor = System.Drawing.Color.White
-        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel3.Controls.Add(Me.FlowDigi)
-        Me.Panel3.Controls.Add(Me.Label4)
-        Me.Panel3.Location = New System.Drawing.Point(5, 4)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(102, 59)
-        Me.Panel3.TabIndex = 58
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.Red
-        Me.Label4.Location = New System.Drawing.Point(58, 42)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(41, 13)
-        Me.Label4.TabIndex = 59
-        Me.Label4.Text = "Ltr/Hr"
+        Me.FlowDisplayPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(182, Byte), Integer), CType(CType(216, Byte), Integer), CType(CType(205, Byte), Integer))
+        Me.FlowDisplayPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.FlowDisplayPanel.Controls.Add(Me.FlowDigi)
+        Me.FlowDisplayPanel.Controls.Add(Me.Label4)
+        Me.FlowDisplayPanel.Location = New System.Drawing.Point(5, 4)
+        Me.FlowDisplayPanel.Name = "FlowDisplayPanel"
+        Me.FlowDisplayPanel.Size = New System.Drawing.Size(102, 59)
+        Me.FlowDisplayPanel.TabIndex = 58
         '
         'FlowDigi
         '
         Me.FlowDigi.BackColor = System.Drawing.Color.Transparent
-        Me.FlowDigi.DigitColor = System.Drawing.Color.Red
+        Me.FlowDigi.DigitColor = System.Drawing.Color.DarkGreen
         Me.FlowDigi.DigitText = "00000"
         Me.FlowDigi.Location = New System.Drawing.Point(3, 3)
         Me.FlowDigi.Name = "FlowDigi"
         Me.FlowDigi.Size = New System.Drawing.Size(95, 36)
         Me.FlowDigi.TabIndex = 57
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.DarkGreen
+        Me.Label4.Location = New System.Drawing.Point(50, 41)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(48, 13)
+        Me.Label4.TabIndex = 59
+        Me.Label4.Text = "Ltr/Min"
+        '
         'FlowSensorCurrentLabel
         '
         Me.FlowSensorCurrentLabel.AutoSize = True
         Me.FlowSensorCurrentLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FlowSensorCurrentLabel.ForeColor = System.Drawing.Color.Blue
+        Me.FlowSensorCurrentLabel.ForeColor = System.Drawing.Color.DarkGreen
         Me.FlowSensorCurrentLabel.Location = New System.Drawing.Point(339, 274)
         Me.FlowSensorCurrentLabel.Name = "FlowSensorCurrentLabel"
         Me.FlowSensorCurrentLabel.Size = New System.Drawing.Size(98, 13)
@@ -634,7 +623,7 @@ Partial Class Nvis3002APanel
         '
         Me.ControlValveCurrentLabel.AutoSize = True
         Me.ControlValveCurrentLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ControlValveCurrentLabel.ForeColor = System.Drawing.Color.Blue
+        Me.ControlValveCurrentLabel.ForeColor = System.Drawing.Color.Black
         Me.ControlValveCurrentLabel.Location = New System.Drawing.Point(597, 174)
         Me.ControlValveCurrentLabel.Name = "ControlValveCurrentLabel"
         Me.ControlValveCurrentLabel.Size = New System.Drawing.Size(98, 13)
@@ -688,11 +677,23 @@ Partial Class Nvis3002APanel
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.DarkGreen
         Me.Label3.Location = New System.Drawing.Point(348, 258)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(76, 13)
         Me.Label3.TabIndex = 66
         Me.Label3.Text = "Flow Sensor"
+        '
+        'LevelCurrentLabel
+        '
+        Me.LevelCurrentLabel.AutoSize = True
+        Me.LevelCurrentLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LevelCurrentLabel.ForeColor = System.Drawing.Color.Blue
+        Me.LevelCurrentLabel.Location = New System.Drawing.Point(58, 56)
+        Me.LevelCurrentLabel.Name = "LevelCurrentLabel"
+        Me.LevelCurrentLabel.Size = New System.Drawing.Size(98, 13)
+        Me.LevelCurrentLabel.TabIndex = 75
+        Me.LevelCurrentLabel.Text = "Current 00.0 mA"
         '
         'Nvis3002APanel
         '
@@ -700,6 +701,7 @@ Partial Class Nvis3002APanel
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Transparent
         Me.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Controls.Add(Me.LevelCurrentLabel)
         Me.Controls.Add(Me.PictureBox16)
         Me.Controls.Add(Me.PictureBox19)
         Me.Controls.Add(Me.PictureBox9)
@@ -721,7 +723,6 @@ Partial Class Nvis3002APanel
         Me.Controls.Add(Me.PictureBox8)
         Me.Controls.Add(Me.DrainPipe2)
         Me.Controls.Add(Me.PumpLabel)
-        Me.Controls.Add(Me.LevelUnitLabel)
         Me.Controls.Add(Me.LevelLabel)
         Me.Controls.Add(Me.PictureBox4)
         Me.Controls.Add(Me.PictureBox7)
@@ -755,8 +756,8 @@ Partial Class Nvis3002APanel
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
-        Me.Panel3.ResumeLayout(False)
-        Me.Panel3.PerformLayout()
+        Me.FlowDisplayPanel.ResumeLayout(False)
+        Me.FlowDisplayPanel.PerformLayout()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FlowONPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
@@ -797,7 +798,6 @@ Partial Class Nvis3002APanel
     Friend WithEvents PictureBox14 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox15 As System.Windows.Forms.PictureBox
     Friend WithEvents LevelLabel As System.Windows.Forms.Label
-    Friend WithEvents LevelUnitLabel As System.Windows.Forms.Label
     Friend WithEvents ValvImage As System.Windows.Forms.PictureBox
     Friend WithEvents FillWater2 As Microsoft.VisualBasic.PowerPacks.RectangleShape
     Friend WithEvents DrainPipe2 As System.Windows.Forms.Panel
@@ -824,9 +824,10 @@ Partial Class Nvis3002APanel
     Friend WithEvents PictureBox19 As System.Windows.Forms.PictureBox
     Friend WithEvents FillWater4 As Microsoft.VisualBasic.PowerPacks.RectangleShape
     Friend WithEvents BigValveTimer As System.Windows.Forms.Timer
-    Friend WithEvents Panel3 As System.Windows.Forms.Panel
+    Friend WithEvents FlowDisplayPanel As System.Windows.Forms.Panel
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents LevelCurrentLabel As System.Windows.Forms.Label
 
 
 End Class

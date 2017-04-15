@@ -29,8 +29,8 @@ Public Class Nvis3002APanel
     End Property
 
     Private Sub Nvis3002APanel_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Width = 865
-        Height = 475
+        Width = 770
+        Height = 420
         OverFlowAt = 90
         FlowMaxValue = 1000
         FlowMinValue = 0
@@ -40,13 +40,12 @@ Public Class Nvis3002APanel
         EmptyBigValvePipes()
         StepSize = 5
         FlowTime = 20
-        LevelUnit = "%"
     End Sub
 #End Region
 
 
 #Region "TANK"
-    Property TankLevel As Integer
+    Private Property TankLevel As Integer
         Get
             Return SquareTank1.Level
         End Get
@@ -59,13 +58,29 @@ Public Class Nvis3002APanel
         End Set
     End Property
 
-    Property LevelCurrent As String
+    Dim Lvl As Integer
+    Property WaterLevel As Integer
         Get
-            Return LevelLabel.Text
+            Return Lvl
         End Get
-        Set(ByVal value As String)
-            LevelLabel.Text = value
-            LevelUnitLabel.Left = LevelLabel.Right
+        Set(value As Integer)
+            If value < 0 Or value > TankRange Then Exit Property
+            Lvl = value
+            TankLevel = Lvl
+            LevelCurrent = Lvl * 16 / 100 + 4
+            LevelLabel.Text = "(" + Lvl.ToString + "%)"
+        End Set
+    End Property
+
+    Dim LvlCurrent As Double
+    Property LevelCurrent As Double
+        Get
+            Return LvlCurrent
+        End Get
+        Set(ByVal value As Double)
+            If value < 4 Or value > 20 Then Exit Property
+            LvlCurrent = FormatNumber(value, 1)
+            LevelCurrentLabel.Text = "Current " + value.ToString("00.0") + " mA"
         End Set
     End Property
 
@@ -85,16 +100,6 @@ Public Class Nvis3002APanel
         End Get
         Set(ByVal value As Integer)
             SquareTank1.SetPoint = value
-        End Set
-    End Property
-
-    Property LevelUnit As String
-        Get
-            Return LevelUnitLabel.Text
-        End Get
-        Set(ByVal value As String)
-            LevelUnitLabel.Text = value
-            LevelUnitLabel.Left = LevelLabel.Right
         End Set
     End Property
 
@@ -442,8 +447,10 @@ Public Class Nvis3002APanel
             BigValveTimer.Enabled = value
             If value = True Then
                 ControlValveLabel.ForeColor = Color.Red
+                ControlValveCurrentLabel.ForeColor = Color.Red
             Else
                 ControlValveLabel.ForeColor = Color.Black
+                ControlValveCurrentLabel.ForeColor = Color.Black
                 If BigValvePipeIndex = 2 Then EmptyBigValvePipes()
             End If
         End Set
