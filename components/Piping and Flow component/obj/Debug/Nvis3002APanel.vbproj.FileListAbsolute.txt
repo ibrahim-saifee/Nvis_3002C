@@ -96,3 +96,12 @@ D:\Office Work\Scientech\Nvis 3002C_work\Nvis 3002C component\Piping and Flow co
 D:\Office Work\Scientech\Nvis 3002C_work\Nvis 3002C component\Piping and Flow component\obj\Debug\Nvis3002APanel.dll
 D:\Office Work\Scientech\Nvis 3002C_work\Nvis 3002C component\Piping and Flow component\obj\Debug\Nvis3002APanel.xml
 D:\Office Work\Scientech\Nvis 3002C_work\Nvis 3002C component\Piping and Flow component\obj\Debug\Nvis3002APanel.pdb
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis_3002C\components\Piping and Flow component\bin\Debug\Nvis3002APanel.dll
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis_3002C\components\Piping and Flow component\bin\Debug\Nvis3002APanel.pdb
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis_3002C\components\Piping and Flow component\bin\Debug\Nvis3002APanel.xml
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis_3002C\components\Piping and Flow component\obj\Debug\Nvis3002APanel.Resources.resources
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis_3002C\components\Piping and Flow component\obj\Debug\Nvis3002APanel.Nvis3002APanel.resources
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis_3002C\components\Piping and Flow component\obj\Debug\Nvis3002APanel.vbproj.GenerateResource.Cache
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis_3002C\components\Piping and Flow component\obj\Debug\Nvis3002APanel.dll
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis_3002C\components\Piping and Flow component\obj\Debug\Nvis3002APanel.xml
+D:\Office Work\Scientech\Nvis 3002C_work\Nvis_3002C\components\Piping and Flow component\obj\Debug\Nvis3002APanel.pdb

@@ -33,7 +33,7 @@ Public Class Nvis3002APanel
         Height = 475
         OverFlowAt = 90
         FlowMaxValue = 1000
-        FlowMinValue = 200
+        FlowMinValue = 0
         EmptyDrainPipes()
         EmptyFillingPipes()
         EmptyOverflowPipes()

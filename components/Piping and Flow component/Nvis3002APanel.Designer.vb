@@ -114,7 +114,7 @@ Partial Class Nvis3002APanel
         Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer1.Name = "ShapeContainer1"
         Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.FillWater4, Me.BigValveWater2, Me.FillWater2, Me.FillWater1, Me.OverflowWater1, Me.DrainWater2, Me.DrainWater1, Me.FillWater3, Me.BigValveWater1, Me.OverflowWater2})
-        Me.ShapeContainer1.Size = New System.Drawing.Size(765, 450)
+        Me.ShapeContainer1.Size = New System.Drawing.Size(765, 415)
         Me.ShapeContainer1.TabIndex = 3
         Me.ShapeContainer1.TabStop = False
         '
@@ -271,7 +271,7 @@ Partial Class Nvis3002APanel
         '
         Me.PumpLabel.AutoSize = True
         Me.PumpLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PumpLabel.Location = New System.Drawing.Point(505, 376)
+        Me.PumpLabel.Location = New System.Drawing.Point(505, 345)
         Me.PumpLabel.Name = "PumpLabel"
         Me.PumpLabel.Size = New System.Drawing.Size(38, 13)
         Me.PumpLabel.TabIndex = 9
@@ -351,7 +351,7 @@ Partial Class Nvis3002APanel
         '
         Me.PictureBox9.BackgroundImage = CType(resources.GetObject("PictureBox9.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox9.Location = New System.Drawing.Point(549, 411)
+        Me.PictureBox9.Location = New System.Drawing.Point(549, 379)
         Me.PictureBox9.Name = "PictureBox9"
         Me.PictureBox9.Size = New System.Drawing.Size(20, 17)
         Me.PictureBox9.TabIndex = 27
@@ -451,7 +451,7 @@ Partial Class Nvis3002APanel
         Me.SquareTankNoStirrer1.Location = New System.Drawing.Point(562, 264)
         Me.SquareTankNoStirrer1.Name = "SquareTankNoStirrer1"
         Me.SquareTankNoStirrer1.Range = 150
-        Me.SquareTankNoStirrer1.Size = New System.Drawing.Size(191, 173)
+        Me.SquareTankNoStirrer1.Size = New System.Drawing.Size(191, 142)
         Me.SquareTankNoStirrer1.TabIndex = 5
         '
         'DrainPipe2
@@ -693,7 +693,7 @@ Partial Class Nvis3002APanel
         '
         Me.PictureBox16.BackgroundImage = CType(resources.GetObject("PictureBox16.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox16.Location = New System.Drawing.Point(470, 396)
+        Me.PictureBox16.Location = New System.Drawing.Point(470, 365)
         Me.PictureBox16.Name = "PictureBox16"
         Me.PictureBox16.Size = New System.Drawing.Size(31, 32)
         Me.PictureBox16.TabIndex = 74
@@ -705,14 +705,14 @@ Partial Class Nvis3002APanel
         Me.FillPipe4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.FillPipe4.Location = New System.Drawing.Point(474, 251)
         Me.FillPipe4.Name = "FillPipe4"
-        Me.FillPipe4.Size = New System.Drawing.Size(12, 150)
+        Me.FillPipe4.Size = New System.Drawing.Size(12, 120)
         Me.FillPipe4.TabIndex = 18
         '
         'PictureBox19
         '
         Me.PictureBox19.BackgroundImage = CType(resources.GetObject("PictureBox19.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox19.Location = New System.Drawing.Point(496, 392)
+        Me.PictureBox19.Location = New System.Drawing.Point(496, 361)
         Me.PictureBox19.Name = "PictureBox19"
         Me.PictureBox19.Size = New System.Drawing.Size(60, 45)
         Me.PictureBox19.TabIndex = 44
@@ -739,6 +739,7 @@ Partial Class Nvis3002APanel
         Me.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Controls.Add(Me.PictureBox16)
         Me.Controls.Add(Me.PictureBox19)
+        Me.Controls.Add(Me.PictureBox9)
         Me.Controls.Add(Me.ControlValveCurrentLabel)
         Me.Controls.Add(Me.ControlValveLabel)
         Me.Controls.Add(Me.PictureBox13)
@@ -760,7 +761,6 @@ Partial Class Nvis3002APanel
         Me.Controls.Add(Me.LevelUnitLabel)
         Me.Controls.Add(Me.LevelLabel)
         Me.Controls.Add(Me.PictureBox4)
-        Me.Controls.Add(Me.PictureBox9)
         Me.Controls.Add(Me.PictureBox7)
         Me.Controls.Add(Me.ValveLabel)
         Me.Controls.Add(Me.ShapeContainer1)
@@ -779,7 +779,7 @@ Partial Class Nvis3002APanel
         Me.Controls.Add(Me.FillPipe4)
         Me.Controls.Add(Me.PictureBox5)
         Me.Name = "Nvis3002APanel"
-        Me.Size = New System.Drawing.Size(765, 450)
+        Me.Size = New System.Drawing.Size(765, 415)
         CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
