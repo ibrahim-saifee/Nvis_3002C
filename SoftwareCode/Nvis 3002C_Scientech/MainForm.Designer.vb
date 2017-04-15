@@ -742,7 +742,7 @@ Partial Class MainForm
         Me.WaterFlowSystem1.ControlValveOpening = 0
         Me.WaterFlowSystem1.Drain = False
         Me.WaterFlowSystem1.Fill = False
-        Me.WaterFlowSystem1.FlowCurrentValue = 0.0R
+        Me.WaterFlowSystem1.FlowCurrentValue = 4.0R
         Me.WaterFlowSystem1.FlowMaxValue = 1000
         Me.WaterFlowSystem1.FlowMinValue = 0
         Me.WaterFlowSystem1.FlowTime = 20
@@ -753,7 +753,7 @@ Partial Class MainForm
         Me.WaterFlowSystem1.Name = "WaterFlowSystem1"
         Me.WaterFlowSystem1.OverFlow = False
         Me.WaterFlowSystem1.OverFlowAt = 90
-        Me.WaterFlowSystem1.Size = New System.Drawing.Size(865, 475)
+        Me.WaterFlowSystem1.Size = New System.Drawing.Size(773, 430)
         Me.WaterFlowSystem1.StepSize = 5
         Me.WaterFlowSystem1.TabIndex = 0
         Me.WaterFlowSystem1.TankLevel = 50

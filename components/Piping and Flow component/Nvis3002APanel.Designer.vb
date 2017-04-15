@@ -65,11 +65,8 @@ Partial Class Nvis3002APanel
         Me.PictureBox12 = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.DigitalDisplayControl1 = New Owf.Controls.DigitalDisplayControl()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.FlowDigi = New Owf.Controls.DigitalDisplayControl()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.FlowSensorCurrentLabel = New System.Windows.Forms.Label()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
@@ -98,7 +95,6 @@ Partial Class Nvis3002APanel
         CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
-        Me.Panel1.SuspendLayout()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FlowONPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -518,7 +514,6 @@ Partial Class Nvis3002APanel
         '
         Me.Panel2.BackColor = System.Drawing.Color.Gray
         Me.Panel2.Controls.Add(Me.Panel3)
-        Me.Panel2.Controls.Add(Me.Panel1)
         Me.Panel2.Location = New System.Drawing.Point(325, 132)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(111, 69)
@@ -528,65 +523,33 @@ Partial Class Nvis3002APanel
         '
         Me.Panel3.BackColor = System.Drawing.Color.White
         Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel3.Controls.Add(Me.DigitalDisplayControl1)
+        Me.Panel3.Controls.Add(Me.FlowDigi)
         Me.Panel3.Controls.Add(Me.Label4)
-        Me.Panel3.Location = New System.Drawing.Point(5, 5)
+        Me.Panel3.Location = New System.Drawing.Point(5, 4)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(102, 59)
         Me.Panel3.TabIndex = 58
-        '
-        'DigitalDisplayControl1
-        '
-        Me.DigitalDisplayControl1.BackColor = System.Drawing.Color.Transparent
-        Me.DigitalDisplayControl1.DigitColor = System.Drawing.Color.Red
-        Me.DigitalDisplayControl1.DigitText = "00000"
-        Me.DigitalDisplayControl1.Location = New System.Drawing.Point(1, -7)
-        Me.DigitalDisplayControl1.Name = "DigitalDisplayControl1"
-        Me.DigitalDisplayControl1.Size = New System.Drawing.Size(95, 49)
-        Me.DigitalDisplayControl1.TabIndex = 57
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Red
-        Me.Label4.Location = New System.Drawing.Point(52, 39)
+        Me.Label4.Location = New System.Drawing.Point(58, 42)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(41, 13)
         Me.Label4.TabIndex = 59
         Me.Label4.Text = "Ltr/Hr"
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.White
-        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Controls.Add(Me.FlowDigi)
-        Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Location = New System.Drawing.Point(5, 2)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(102, 59)
-        Me.Panel1.TabIndex = 58
         '
         'FlowDigi
         '
         Me.FlowDigi.BackColor = System.Drawing.Color.Transparent
         Me.FlowDigi.DigitColor = System.Drawing.Color.Red
         Me.FlowDigi.DigitText = "00000"
-        Me.FlowDigi.Location = New System.Drawing.Point(1, -7)
+        Me.FlowDigi.Location = New System.Drawing.Point(3, 3)
         Me.FlowDigi.Name = "FlowDigi"
-        Me.FlowDigi.Size = New System.Drawing.Size(95, 49)
+        Me.FlowDigi.Size = New System.Drawing.Size(95, 36)
         Me.FlowDigi.TabIndex = 57
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Red
-        Me.Label2.Location = New System.Drawing.Point(52, 39)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(41, 13)
-        Me.Label2.TabIndex = 59
-        Me.Label2.Text = "Ltr/Hr"
         '
         'FlowSensorCurrentLabel
         '
@@ -794,8 +757,6 @@ Partial Class Nvis3002APanel
         Me.Panel2.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FlowONPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
@@ -846,9 +807,7 @@ Partial Class Nvis3002APanel
     Friend WithEvents FillPipe1 As System.Windows.Forms.Panel
     Friend WithEvents PictureBox12 As System.Windows.Forms.PictureBox
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
-    Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents FlowDigi As Owf.Controls.DigitalDisplayControl
-    Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents FlowSensorCurrentLabel As System.Windows.Forms.Label
     Friend WithEvents PictureBox6 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
@@ -866,7 +825,6 @@ Partial Class Nvis3002APanel
     Friend WithEvents FillWater4 As Microsoft.VisualBasic.PowerPacks.RectangleShape
     Friend WithEvents BigValveTimer As System.Windows.Forms.Timer
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
-    Friend WithEvents DigitalDisplayControl1 As Owf.Controls.DigitalDisplayControl
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
 

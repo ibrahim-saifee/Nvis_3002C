@@ -79,6 +79,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\Owf.Controls.DigitalDisplayControl.dll</HintPath>
     </Reference>
+    <Reference Include="SquareTank, Version=1.0.6309.41589, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\SquareTank.dll</HintPath>
+    </Reference>
     <Reference Include="SquareTankNoStirrer, Version=1.0.5632.19041, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\SquareTankNoStirrer.dll</HintPath>

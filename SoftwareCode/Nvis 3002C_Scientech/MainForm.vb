@@ -97,7 +97,7 @@ Public Class MainForm
         ' DAC for 0-2 V         0 to 102
 
         ' Here valve opening 0 to 100 % (4 to 20 mA) is scaled to DAC 0 to 102 (0 to 2V)
-        If Opening < 25 Or Opening > 100 Then Exit Sub
+        If Opening > 100 Then Exit Sub
         WaterFlowSystem1.ControlValveOpening = Opening
         'WaterFlowSystem1.ControlValveCurrent = Opening * 16 / 100 + 4
         ControlValveDAC0 = Opening * 409 / 100
