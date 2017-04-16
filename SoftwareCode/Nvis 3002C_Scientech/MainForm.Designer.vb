@@ -126,6 +126,7 @@ Partial Class MainForm
         Me.FlowSelectionImage = New System.Windows.Forms.PictureBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
+        Me.LevelPIDTimer = New System.Windows.Forms.Timer(Me.components)
         Me.MenuStrip.SuspendLayout()
         CType(Me.LinkLedPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.FlowPanel.SuspendLayout()
@@ -1162,6 +1163,7 @@ Partial Class MainForm
         Me.LevelSelectionImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.LevelSelectionImage.TabIndex = 1
         Me.LevelSelectionImage.TabStop = False
+        Me.LevelSelectionImage.Visible = False
         '
         'FlowSelectionImage
         '
@@ -1172,7 +1174,6 @@ Partial Class MainForm
         Me.FlowSelectionImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.FlowSelectionImage.TabIndex = 0
         Me.FlowSelectionImage.TabStop = False
-        Me.FlowSelectionImage.Visible = False
         '
         'Label14
         '
@@ -1195,6 +1196,9 @@ Partial Class MainForm
         Me.Label16.TabIndex = 106
         Me.Label16.Text = "Level" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Process"
         Me.Label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'LevelPIDTimer
+        '
         '
         'MainForm
         '
@@ -1387,5 +1391,6 @@ Partial Class MainForm
     Friend WithEvents FlowSelectionImage As System.Windows.Forms.PictureBox
     Friend WithEvents Label14 As System.Windows.Forms.Label
     Friend WithEvents Label16 As System.Windows.Forms.Label
+    Friend WithEvents LevelPIDTimer As System.Windows.Forms.Timer
 
 End Class

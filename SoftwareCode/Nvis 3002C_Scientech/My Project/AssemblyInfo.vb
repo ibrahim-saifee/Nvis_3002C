@@ -9,7 +9,7 @@ Imports System.Runtime.InteropServices
 ' Review the values of the assembly attributes
 
 <Assembly: AssemblyTitle("Nvis 3002C")> 
-<Assembly: AssemblyDescription("Flow Measuring Workbench")> 
+<Assembly: AssemblyDescription("Flow and Level Process Control")> 
 <Assembly: AssemblyCompany("Nvis Technologies Pvt. Ltd.")> 
 <Assembly: AssemblyProduct("Nvis 3002C")> 
 <Assembly: AssemblyCopyright("Copyright ©  2017")> 

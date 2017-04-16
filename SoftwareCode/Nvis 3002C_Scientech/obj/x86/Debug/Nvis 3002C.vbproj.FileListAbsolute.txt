@@ -21,7 +21,6 @@ D:\Office Work\Scientech\Nvis 3002C_work\Nvis_3002C\SoftwareCode\Nvis 3002C_Scie
 D:\Office Work\Scientech\Nvis 3002C_work\Nvis_3002C\SoftwareCode\Nvis 3002C_Scientech\obj\x86\Debug\Nvis 3002C.exe
 D:\Office Work\Scientech\Nvis 3002C_work\Nvis_3002C\SoftwareCode\Nvis 3002C_Scientech\obj\x86\Debug\Nvis 3002C.xml
 D:\Office Work\Scientech\Nvis 3002C_work\Nvis_3002C\SoftwareCode\Nvis 3002C_Scientech\obj\x86\Debug\Nvis 3002C.pdb
-D:\Office Work\Scientech\Nvis 3002C_work\Nvis_3002C\SoftwareCode\Nvis 3002C_Scientech\obj\x86\Debug\Nvis 3002C.vbprojResolveAssemblyReference.cache
 D:\Office Work\Scientech\Nvis 3002C_work\Nvis_3002C\SoftwareCode\Nvis 3002C_Scientech\obj\x86\Debug\Nvis_3002C.ControlSettingsForm.resources
 D:\Office Work\Scientech\Nvis 3002C_work\Nvis_3002C\SoftwareCode\Nvis 3002C_Scientech\obj\x86\Debug\Nvis_3002C.DatabaseConnection.resources
 D:\Office Work\Scientech\Nvis 3002C_work\Nvis_3002C\SoftwareCode\Nvis 3002C_Scientech\obj\x86\Debug\Nvis_3002C.Delete.resources

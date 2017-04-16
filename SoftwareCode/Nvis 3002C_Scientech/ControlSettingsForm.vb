@@ -95,14 +95,24 @@
         End If
     End Sub
 
-    Private Sub SetButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SetButton.Click
-        MainForm.ProportionalConstant = FormatNumber(KpTrackBar._Valeur / 100, 3)
-        MainForm.IntegralConstant = FormatNumber((KpTrackBar._Valeur / TiTrackBar._Valeur) / 100, 3)
-        MainForm.DerivativeConstant = FormatNumber((KpTrackBar._Valeur * TdTrackBar._Valeur), 3)
+    Private Sub SetPIDParameters(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SetButton.Click
+        If MainForm.CurrentProcess = MainForm.PIDProcesses.FlowProcess Then
+            MainForm.FlowProportionalConstant = FormatNumber(KpTrackBar._Valeur / 100, 3)
+            MainForm.FlowIntegralConstant = FormatNumber((KpTrackBar._Valeur / TiTrackBar._Valeur) / 100, 3)
+            MainForm.FlowDerivativeConstant = FormatNumber((KpTrackBar._Valeur * TdTrackBar._Valeur), 3)
+        ElseIf MainForm.CurrentProcess = MainForm.PIDProcesses.LevelProcess Then
+            MainForm.LevelProportionalConstant = FormatNumber(KpTrackBar._Valeur / 100, 3)
+            MainForm.LevelIntegralConstant = FormatNumber((KpTrackBar._Valeur / TiTrackBar._Valeur) * 5, 3)
+            MainForm.LevelDerivativeConstant = FormatNumber((KpTrackBar._Valeur * TdTrackBar._Valeur) / 5, 3)
+        End If
         Me.Close()
     End Sub
 
     Private Sub ControlSettingsForm_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        'pradio.Checked = True
+        If MainForm.CurrentProcess = MainForm.PIDProcesses.FlowProcess Then
+            HeadingLabel.Text = "Flow Process Cotrol Settings"
+        ElseIf MainForm.CurrentProcess = MainForm.PIDProcesses.LevelProcess Then
+            HeadingLabel.Text = "Level Process Cotrol Settings"
+        End If
     End Sub
 End Class

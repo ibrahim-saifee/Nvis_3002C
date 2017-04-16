@@ -36,9 +36,9 @@ Partial Class SetAlarm
         Me.LevelTextBox = New System.Windows.Forms.MaskedTextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.LevelAlarmTable = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.LevelRemoveButton = New System.Windows.Forms.Button()
         Me.LevelAddButton = New System.Windows.Forms.Button()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel2.SuspendLayout()
         CType(Me.FlowAlarmTable, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -186,6 +186,11 @@ Partial Class SetAlarm
         Me.LevelAlarmTable.Size = New System.Drawing.Size(146, 197)
         Me.LevelAlarmTable.TabIndex = 7
         '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.HeaderText = "Level"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        '
         'LevelRemoveButton
         '
         Me.LevelRemoveButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -205,11 +210,6 @@ Partial Class SetAlarm
         Me.LevelAddButton.TabIndex = 6
         Me.LevelAddButton.Text = "Add"
         Me.LevelAddButton.UseVisualStyleBackColor = True
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.HeaderText = "Level"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
         '
         'SetAlarm
         '

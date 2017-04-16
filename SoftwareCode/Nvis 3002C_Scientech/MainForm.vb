@@ -43,9 +43,13 @@ Public Class MainForm
     Public Shared FlowTableName As String = "Flow_1v0"
     Public Shared LevelTableName As String = "Level_1v0"
 
-    Public ProportionalConstant As Double = 30 / 100
-    Public DerivativeConstant As Double = 30 / 50 * 1
-    Public IntegralConstant As Double = 30 * 80 / 1
+    Public FlowProportionalConstant As Double = 30 / 100
+    Public FlowDerivativeConstant As Double = 30 / 50 * 1
+    Public FlowIntegralConstant As Double = 30 * 80 / 1
+
+    Public LevelProportionalConstant As Double = 30 / 100
+    Public LevelDerivativeConstant As Double = 30 / 50 * 1
+    Public LevelIntegralConstant As Double = 30 * 80 / 1
 
     Public FlowValue As Integer
     Public LevelValue As Integer
@@ -53,6 +57,30 @@ Public Class MainForm
     Dim Logging As Boolean = False
 
     Dim LinkCheckThread As Thread
+
+    Private Sub Switch_Start()
+        IsStartPressed = True
+        Switch_VisualIndicator(True)
+        SelectorPanel.Enabled = False
+        SetAlarmToolStripMenuItem.Enabled = False
+        SettingsToolStripMenuItem.Enabled = False
+        DataScanTimer.Enabled = True
+        If CurrentProcess = PIDProcesses.FlowProcess Then
+            Switch_Pump(True)
+            PumpTimer.Enabled = True
+            LevelPIDTimer.Enabled = False
+        ElseIf CurrentProcess = PIDProcesses.LevelProcess Then
+            PumpTimer.Enabled = False
+            LevelStates = 0
+            LevelPIDTimer.Interval = 1
+            LevelPIDTimer.Enabled = True
+        End If
+    End Sub
+
+    Private Sub Switch_Stop()
+        Switch_Buzzer(False)
+        AllOFF()
+    End Sub
 
     Private Sub Switch_Buzzer(ByVal state As Boolean)
         If state = True Then
@@ -90,12 +118,10 @@ Public Class MainForm
             PumpY0 = "1"
             PumpLed.BackgroundImage = My.Resources.red_led_on
             WaterFlowSystem1.Fill = True
-            PumpTimer.Enabled = True
         Else
             PumpY0 = "0"
             PumpLed.BackgroundImage = My.Resources.red_led_off
             WaterFlowSystem1.Fill = False
-            PumpTimer.Enabled = False
         End If
     End Sub
 
@@ -143,22 +169,14 @@ Public Class MainForm
                 StartToolStripMenuItem2.Image = My.Resources._stop
                 EthernetSendTimer.Enabled = True
                 EthernetRecTimer.Enabled = True
-                DataScanTimer.Enabled = True
-                'LinkLedTimer.Enabled = True
-                SelectorPanel.Enabled = False
             Else
                 Ethernet.Send("A00000000000000000")
-                AllOFF()
+                Switch_Stop()
                 Ethernet.Disconnect()
                 StartToolStripMenuItem2.Text = "S&tart"
                 StartToolStripMenuItem2.Image = My.Resources.play
                 EthernetSendTimer.Enabled = False
                 EthernetRecTimer.Enabled = False
-                DataScanTimer.Enabled = False
-                SelectorPanel.Enabled = True
-                'LinkLedTimer.Enabled = False
-                'LinkLedPictureBox.BackgroundImage = My.Resources.green_led_off
-                'IsLinkLedOn = False
             End If
         Catch ex As Exception
             Ethernet.Disconnect()
@@ -175,13 +193,7 @@ Public Class MainForm
             Exit Sub
         End If
         StartButton.BackgroundImage = My.Resources.Buttons_green_on
-        IsStartPressed = True
-        Switch_VisualIndicator(True)
-        'LevelSPUpDown.Enabled = False
-        'TemperatureSPUpDown.Enabled = False
-        SetAlarmToolStripMenuItem.Enabled = False
-        DataScanTimer.Enabled = True
-        'PIDTimer.Enabled = True
+        Switch_Start()
     End Sub
     Private Sub StartButton_MouseUp(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles StartButton.MouseUp
         StartButton.BackgroundImage = My.Resources.Buttons_green_off
@@ -190,9 +202,7 @@ Public Class MainForm
 
     Private Sub StopButton_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles StopButton.MouseDown
         StopButton.BackgroundImage = My.Resources.Buttons_red_on
-        IsStartPressed = False
-        Switch_Buzzer(False)
-        AllOFF()
+        Switch_Stop()
     End Sub
     Private Sub StopButton_MouseUp(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles StopButton.MouseUp
         StopButton.BackgroundImage = My.Resources.Buttons_red_off
@@ -235,22 +245,23 @@ Public Class MainForm
         End If
         PumpButton.BackgroundImage = My.Resources.Buttons_yellow_on
     End Sub
-    Private Sub SolValpButton_MouseUp(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles SolValButton.MouseUp
+    Private Sub SolValButton_MouseUp(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles SolValButton.MouseUp
         SolValButton.BackgroundImage = My.Resources.Buttons_yellow_off
     End Sub
 
     Private Sub AllOFF()
         Switch_Compressor(False)
+        PumpTimer.Enabled = False
         Switch_Pump(False)
         Open_ControlValve(0)
         Switch_VisualIndicator(False)
         IsStartPressed = False
         DataScanTimer.Enabled = False
-        'LevelSPUpDown.Enabled = True
-        'TemperatureSPUpDown.Enabled = True
         SetAlarmToolStripMenuItem.Enabled = True
-        'PIDTimer.Enabled = False
+        SettingsToolStripMenuItem.Enabled = True
+        SelectorPanel.Enabled = True
         FlowPanel.BackColor = Color.Transparent
+        LevelPanel.BackColor = Color.Transparent
     End Sub
 
 
@@ -270,7 +281,7 @@ Public Class MainForm
         If StringCollector.Contains("NV632C8") And IsHardwareFound = False Then
             StringCollector = ""
             IsHardwareFound = True
-            MessageBox.Show(Me, "Hardware found", "Scientech 2474", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show(Me, "Hardware found", "Nvis 3002C", MessageBoxButtons.OK, MessageBoxIcon.Information)
         ElseIf StringCollector.StartsWith("A") And StringCollector.Length >= 29 Then
             DigitalInput(StringCollector.Substring(17, 8))
             DAQTemperatureLabel.Text = "DAQ Temperature: " + ((CDbl(StringCollector.Substring(26, 4)) * 3.3 / 1023) * 100).ToString("00") + "°C"
@@ -299,16 +310,21 @@ Public Class MainForm
             End If
 
             StringCollector = ""
-            If IsStartPressed = False Or PumpTimer.Enabled = False Then Exit Sub
+            If IsStartPressed = False Then Exit Sub
 
             '------------------------ Check if process is open loop or close loop (auto/manual) -----------------------------------------'
             If IsAutoSelected = True Then
-                Flow_P_PI_PID_Operation()
+                If CurrentProcess = PIDProcesses.FlowProcess Then
+                    Flow_P_PI_PID_Operation()
+                ElseIf CurrentProcess = PIDProcesses.LevelProcess Then
+                    'Level_P_PI_PID_Operation()
+                    Open_ControlValve(0)
+                End If
             End If
 
-        ElseIf StringCollector.Length > 30 Then
-            StringCollector = ""
-        End If
+            ElseIf StringCollector.Length > 30 Then
+                StringCollector = ""
+            End If
     End Sub
 
 
@@ -319,19 +335,19 @@ Public Class MainForm
         '------------------ Check for P PI PID Process -----------------------------------------'
         If ControlSettingsForm.pradio.Checked Then
             '------------------ P Process -----------------------------------------'
-            PTerm = ProportionalConstant * ProcessError
+            PTerm = FlowProportionalConstant * ProcessError
             ITerm = 0
             DTerm = 0
         ElseIf ControlSettingsForm.piradio.Checked Then
             '------------------ PI Process -----------------------------------------'
-            PTerm = ProportionalConstant * ProcessError
-            ITerm += IntegralConstant * ProcessError * 1
+            PTerm = FlowProportionalConstant * ProcessError
+            ITerm += FlowIntegralConstant * ProcessError * 1
             DTerm = 0
         ElseIf ControlSettingsForm.pidradio.Checked Then
             '------------------ PID Process -----------------------------------------'
-            PTerm = ProportionalConstant * ProcessError
-            ITerm += IntegralConstant * ProcessError * 1
-            DTerm = DerivativeConstant * (ProcessError - PreviousError)  '0
+            PTerm = FlowProportionalConstant * ProcessError
+            ITerm += FlowIntegralConstant * ProcessError * 1
+            DTerm = FlowDerivativeConstant * (ProcessError - PreviousError)  '0
         End If
         '---------------- Check for overflow of integral due to summing --------------------'
         If ITerm < -5 Then ITerm = -5
@@ -352,20 +368,93 @@ Public Class MainForm
         Open_ControlValve(CalculatedValveOpening)
     End Sub
 
-    Dim IsFlowSelected As Boolean = False
+    Private Sub Level_P_PI_PID_Operation()
+        Dim ProcessError As Integer = LevelSPUpDown.Value - LevelValue
+
+        '------------------ P Process -----------------------------------------'
+        If ControlSettingsForm.pradio.Checked = True Then
+            PTerm = LevelProportionalConstant * ProcessError * 1000
+            ITerm = 0
+            DTerm = 0
+
+            '------------------ PI Process -----------------------------------------'
+        ElseIf ControlSettingsForm.piradio.Checked = True Then
+            PTerm = LevelProportionalConstant * ProcessError * 1000
+            ITerm += LevelIntegralConstant * ProcessError * 10
+            DTerm = 0
+
+            '------------------ PID Process -----------------------------------------'
+        ElseIf ControlSettingsForm.pidradio.Checked = True Then
+            PTerm = LevelProportionalConstant * ProcessError * 1000
+            ITerm += LevelIntegralConstant * ProcessError * 10
+            DTerm = LevelDerivativeConstant * (ProcessError - PreviousError) / 10
+            PreviousError = ProcessError
+        End If
+        LevelONTime = PTerm + ITerm + DTerm
+
+        If ProcessError < -2 Then
+            Switch_Pump(False)
+            Switch_SolenoidValve(True)
+            If ProcessError < -20 Then
+                LevelONTime = 4999
+                LevelOFFTime = 1
+            Else
+                LevelONTime = 2500
+                LevelOFFTime = 2500
+            End If
+        ElseIf ProcessError > 2 Then
+            If LevelONTime > 4000 Then
+                LevelONTime = 4999
+            ElseIf LevelONTime < 1000 Then
+                LevelONTime = 1
+            End If
+            LevelOFFTime = 5000 - LevelONTime
+            Switch_Pump(True)
+            Switch_SolenoidValve(False)
+        End If
+        LevelPIDTimer.Interval = LevelONTime
+        LevelStates = 1
+    End Sub
+    Dim LevelONTime, LevelOFFTime As Integer
+    Dim LevelStates As Integer = 0
+    Private Sub LevelPIDTimer_Tick(sender As Object, e As EventArgs) Handles LevelPIDTimer.Tick
+        LevelPIDTimer.Enabled = False
+        If LevelStates = 0 Then
+            Level_P_PI_PID_Operation()
+            LevelPIDTimer.Enabled = True
+        ElseIf LevelStates = 1 Then
+            If LevelOFFTime > 500 Then
+                Switch_Pump(False)
+                Switch_SolenoidValve(False)
+                LevelPIDTimer.Interval = LevelOFFTime
+            End If
+            LevelStates = 2
+            LevelPIDTimer.Enabled = True
+        ElseIf LevelStates = 2 Then
+            LevelStates = 0
+            LevelPIDTimer.Interval = 1
+            LevelPIDTimer.Enabled = True
+        End If
+    End Sub
+
+    Enum PIDProcesses As Integer
+        FlowProcess
+        LevelProcess
+    End Enum
+    Public Shared CurrentProcess As PIDProcesses = PIDProcesses.FlowProcess
     Private Sub SelectorPanel_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles SelectorPanel.Click, LevelSelectionImage.Click, FlowSelectionImage.Click
-        If IsFlowSelected = True Then
+        If CurrentProcess = PIDProcesses.FlowProcess Then
             LevelSelectionImage.Visible = True
             FlowSelectionImage.Visible = False
             LevelContainerPanel.Visible = True
             FlowContainerPanel.Visible = False
-            IsFlowSelected = False
-        Else
+            CurrentProcess = PIDProcesses.LevelProcess
+        ElseIf CurrentProcess = PIDProcesses.LevelProcess Then
             LevelSelectionImage.Visible = False
             FlowSelectionImage.Visible = True
             LevelContainerPanel.Visible = False
             FlowContainerPanel.Visible = True
-            IsFlowSelected = True
+            CurrentProcess = PIDProcesses.FlowProcess
         End If
     End Sub
 
@@ -432,20 +521,11 @@ Public Class MainForm
 
     Private Sub DigitalInput(ByVal DI As String)
         If DI.Substring(0, 1) = "1" Then
-            IsStartPressed = True
-            'VisualIndicatorY4 = "1"
-            Switch_VisualIndicator(True)
-            'LevelSPUpDown.Enabled = False
-            'TemperatureSPUpDown.Enabled = False
-            SetAlarmToolStripMenuItem.Enabled = False
-            DataScanTimer.Enabled = True
-            'PIDTimer.Enabled = True
+            Switch_Start()
         End If
 
         If DI.Substring(1, 1) = "0" Then
-            'IsEmergency = False
-            Switch_Buzzer(False)
-            AllOFF()
+            Switch_Stop()
         End If
 
         If IsStartPressed = False Then Exit Sub
@@ -528,11 +608,11 @@ Public Class MainForm
 
         Dim LevelGraphPane As GraphPane = LevelGraph.GraphPane
 
-        LevelSetPointLineItem = levelGraphPane.AddCurve("Set Point", SetPointPointPair, Color.Blue, SymbolType.None)
-        GraphSettings(LevelGraph, levelGraphPane, LevelSetPointLineItem, "Set Point", 100)
+        LevelSetPointLineItem = LevelGraphPane.AddCurve("Set Point", SetPointPointPair, Color.Blue, SymbolType.None)
+        GraphSettings(LevelGraph, LevelGraphPane, LevelSetPointLineItem, "Set Point (%)", 100)
 
-        LevelLineItem = levelGraphPane.AddCurve("Level", LevelPointPair, Color.Red, SymbolType.None)
-        GraphSettings(LevelGraph, LevelGraphPane, LevelLineItem, "Level", 100)
+        LevelLineItem = LevelGraphPane.AddCurve("Level", LevelPointPair, Color.Red, SymbolType.None)
+        GraphSettings(LevelGraph, LevelGraphPane, LevelLineItem, "Level (%)", 100)
 
         SQLConnection = New MySqlConnection
         LoadFileConnectionString()
@@ -560,6 +640,8 @@ Public Class MainForm
         FlowSPUpDown.Value = 800
         WaterFlowSystem1.WaterLevel = 50
         PumpTimer.Interval = 60000
+
+        SelectorPanel_Click(Nothing, Nothing)
     End Sub
 
 
@@ -758,6 +840,11 @@ Public Class MainForm
         FlowGraph.Refresh()
     End Sub
 
+    Private Sub LevelGraphClearButton_Click(sender As Object, e As EventArgs) Handles LevelGraphClearButton.Click
+        LevelSetPointLineItem.Clear()
+        LevelLineItem.Clear()
+        LevelGraph.Refresh()
+    End Sub
 
     Private Sub ChangeIPToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ChangeIPToolStripMenuItem.Click
         ShellExecute(0, "open", "http://" + Ethernet.IP + "/protect/config.htm", "", "", 3)
@@ -817,10 +904,8 @@ Public Class MainForm
         Next
         If IsFlowAlarmValueAchieved = True Then
             FlowPanel.BackColor = Color.CornflowerBlue
-            Switch_Buzzer(True)
         Else
             FlowPanel.BackColor = Color.Transparent
-            Switch_Buzzer(False)
         End If
 
         Dim IsLevelAlarmValueAchieved As Boolean = False
@@ -832,11 +917,16 @@ Public Class MainForm
         Next
         If IsLevelAlarmValueAchieved = True Then
             LevelPanel.BackColor = Color.CornflowerBlue
-            Switch_Buzzer(True)
         Else
             LevelPanel.BackColor = Color.Transparent
+        End If
+
+        If IsLevelAlarmValueAchieved = True Or IsFlowAlarmValueAchieved = True Then
+            Switch_Buzzer(True)
+        Else
             Switch_Buzzer(False)
         End If
+
     End Sub
 
 
@@ -904,8 +994,7 @@ Public Class MainForm
 
 
     Private Sub PumpTimer_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PumpTimer.Tick
-        PumpTimer.Enabled = False
-        Switch_Pump(False)
+        Switch_Stop()
     End Sub
 
     Private Sub PumpTimeIntervalToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PumpTimeIntervalToolStripMenuItem.Click

@@ -25,7 +25,7 @@ Partial Class ControlSettingsForm
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ControlSettingsForm))
         Me.SetButton = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.HeadingLabel = New System.Windows.Forms.Label()
         Me.TdTextBox = New System.Windows.Forms.MaskedTextBox()
         Me.TiTextBox = New System.Windows.Forms.MaskedTextBox()
         Me.KpTextBox = New System.Windows.Forms.MaskedTextBox()
@@ -56,7 +56,7 @@ Partial Class ControlSettingsForm
         'Panel1
         '
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.HeadingLabel)
         Me.Panel1.Controls.Add(Me.TdTextBox)
         Me.Panel1.Controls.Add(Me.TiTextBox)
         Me.Panel1.Controls.Add(Me.KpTextBox)
@@ -73,15 +73,15 @@ Partial Class ControlSettingsForm
         Me.Panel1.Size = New System.Drawing.Size(277, 230)
         Me.Panel1.TabIndex = 132
         '
-        'Label2
+        'HeadingLabel
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(6, 5)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(178, 16)
-        Me.Label2.TabIndex = 147
-        Me.Label2.Text = "Process Control Settings"
+        Me.HeadingLabel.AutoSize = True
+        Me.HeadingLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.HeadingLabel.Location = New System.Drawing.Point(8, 8)
+        Me.HeadingLabel.Name = "HeadingLabel"
+        Me.HeadingLabel.Size = New System.Drawing.Size(187, 17)
+        Me.HeadingLabel.TabIndex = 147
+        Me.HeadingLabel.Text = "Process Control Settings"
         '
         'TdTextBox
         '
@@ -272,7 +272,7 @@ Partial Class ControlSettingsForm
     End Sub
     Friend WithEvents SetButton As System.Windows.Forms.Button
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents HeadingLabel As System.Windows.Forms.Label
     Friend WithEvents TdTextBox As System.Windows.Forms.MaskedTextBox
     Friend WithEvents TiTextBox As System.Windows.Forms.MaskedTextBox
     Friend WithEvents KpTextBox As System.Windows.Forms.MaskedTextBox
