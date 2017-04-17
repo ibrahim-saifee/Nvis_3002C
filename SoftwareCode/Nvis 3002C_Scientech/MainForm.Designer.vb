@@ -1041,7 +1041,7 @@ Partial Class MainForm
         '
         Me.LevelContainerPanel.Controls.Add(Me.Panel10)
         Me.LevelContainerPanel.Controls.Add(Me.LevelPanel)
-        Me.LevelContainerPanel.Location = New System.Drawing.Point(806, 426)
+        Me.LevelContainerPanel.Location = New System.Drawing.Point(805, 426)
         Me.LevelContainerPanel.Name = "LevelContainerPanel"
         Me.LevelContainerPanel.Size = New System.Drawing.Size(180, 120)
         Me.LevelContainerPanel.TabIndex = 103

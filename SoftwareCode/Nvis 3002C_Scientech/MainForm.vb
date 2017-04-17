@@ -28,7 +28,7 @@ Public Class MainForm
     'Dim IsHardEmergency = False
 
     Dim FlowLineItem, FlowSetPointLineItem As LineItem
-    Dim FlowPointPair, SetPointPointPair As New PointPairList
+    Dim FlowPointPair, FlowSetPointPointPair As New PointPairList
 
     Dim LevelLineItem, LevelSetPointLineItem As LineItem
     Dim LevelPointPair, LevelSetPointPointPair As New PointPairList
@@ -600,7 +600,7 @@ Public Class MainForm
 
         Dim FlowGraphPane As GraphPane = FlowGraph.GraphPane
 
-        FlowSetPointLineItem = FlowGraphPane.AddCurve("Set Point", SetPointPointPair, Color.Blue, SymbolType.None)
+        FlowSetPointLineItem = FlowGraphPane.AddCurve("Set Point", FlowSetPointPointPair, Color.Blue, SymbolType.None)
         GraphSettings(FlowGraph, FlowGraphPane, FlowSetPointLineItem, "Set Point (Ltr/min)", 500)
 
         FlowLineItem = FlowGraphPane.AddCurve("Flow", FlowPointPair, Color.Red, SymbolType.None)
@@ -608,7 +608,7 @@ Public Class MainForm
 
         Dim LevelGraphPane As GraphPane = LevelGraph.GraphPane
 
-        LevelSetPointLineItem = LevelGraphPane.AddCurve("Set Point", SetPointPointPair, Color.Blue, SymbolType.None)
+        LevelSetPointLineItem = LevelGraphPane.AddCurve("Set Point", LevelSetPointPointPair, Color.Blue, SymbolType.None)
         GraphSettings(LevelGraph, LevelGraphPane, LevelSetPointLineItem, "Set Point (%)", 100)
 
         LevelLineItem = LevelGraphPane.AddCurve("Level", LevelPointPair, Color.Red, SymbolType.None)
@@ -638,6 +638,7 @@ Public Class MainForm
         BuzzerArc.Distance = 10
 
         FlowSPUpDown.Value = 800
+        LevelSPUpDown.Value = 200
         WaterFlowSystem1.WaterLevel = 50
         PumpTimer.Interval = 60000
 
